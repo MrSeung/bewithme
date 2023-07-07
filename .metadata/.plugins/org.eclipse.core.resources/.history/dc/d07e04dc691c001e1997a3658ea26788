@@ -1,0 +1,27 @@
+package com.bewithme.www.service;
+
+import javax.inject.Inject;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.bewithme.www.domain.UserVO;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Inject
+	private UserDAO udao;
+	@Inject
+	BCryptPasswordEncoder passwordEncoder;
+
+	@Override
+	public int signup(UserVO user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
