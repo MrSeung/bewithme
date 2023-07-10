@@ -11,7 +11,7 @@
     <div class="wrapper">
         <div class="container">
           <div class="sign-up-container">
-            <form action="/member/signup" method="post">
+            <form>
               <h1>Create Account</h1>
               <div class="social-links">
                 <div>
@@ -25,14 +25,14 @@
                 </div>
               </div>
               <span>or use your email for registration</span>
-              <input type="email" name="id" placeholder="Email">
-              <input type="password" name="pw" placeholder="Password">
-              <input type="text" name="nickname" placeholder="NickName">
-              <button class="form_btn">Sign Up</button>
+              <input id="signUpId" type="email" name="id" placeholder="Email">
+              <input id="signUpPw" type="password" name="pw" placeholder="Password">
+              <input id="signUpNick" type="text" name="nickname" placeholder="NickName">
+              <button type="button" id="joinBtn" class="form_btn">Sign Up</button>
             </form>
           </div>
           <div class="sign-in-container">
-            <form action="/member/login" method="post">
+            <form>
               <h1>Sign In</h1>
               <div class="social-links">
                 <div>
@@ -46,9 +46,9 @@
                 </div>
               </div>
               <span>or use your account</span>
-              <input type="id" name="id" placeholder="Email">
-              <input type="password" name="pw" placeholder="Password">
-              <button class="form_btn">Sign In</button>
+              <input id="signInId" type="email" name="id" placeholder="Email">
+              <input id="signInPw" type="password" name="pw" placeholder="Password">
+              <button type="button" id="loginBtn" class="form_btn">Sign In</button>
             </form>
           </div>
           <div class="overlay-container">
@@ -66,15 +66,5 @@
         </div>
       </div>
       <script src="/resources/js/login.js"></script>
-      <script type="text/javascript">
-      const msg_login = '<c:out value="${msg_login}"/>';
-      const msg_signup = '<c:out value="${msg_signup}"/>';
-      	if(msg_login ==='0'){
-      		alert('로그인 실패!');
-      	}
-      	if(msg_signup ==='1'){
-      		alert('회원가입 성공!')
-      	}
-      </script>
 </body>
 </html>

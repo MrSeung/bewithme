@@ -7,23 +7,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>course</title>
-    <link rel="stylesheet" href="resources/css/menu.css">
-    <link rel="stylesheet" href="resources/css/course.css">
+    <link rel="stylesheet" href="/resources/css/menu.css">
+    <link rel="stylesheet" href="/resources/css/course.css">
 </head>
 
 <body>
     <div class="container">
         <div class="left">
-            <img src="resources/img/logo.png" class="logo" alt="">
+            <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
-                <button><a href=""> 🏠<span> Home</span></a></button><br>
-                <button><a href="/subject.html">📝<span class="not"> Subject</span></a></button><br>
-                <button><a href="">📖<span > Community</span></a></button><br>
-                <button><a href="">📁<span> Q&A</span></a></button><br>
+                <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
+                <button><a href="/menu/subject">📝<span class="not"> Subject</span></a></button><br>
+                <button><a href="/menu/community">📖<span> Community</span></a></button><br>
+                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
-                <button><a href="">🗑 Log out</a></button><br>
+                <button><a href="/member/logout">🗑 Log out</a></button><br>
             </div>
         
         </div>

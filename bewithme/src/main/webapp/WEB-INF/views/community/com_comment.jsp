@@ -18,15 +18,15 @@
         <!-- 좌측/ 전체 동일한 메뉴바 부분 -->
        <div class="left">
            <img src="/resources/img/logo.png" class="logo" alt="">
-           <div class="menu_bar">
-               <button><a href=""> 🏠<span> Home</span></a></button><br>
-               <button><a href="">📝<span> Subject</span></a></button><br>
-               <button><a href="">📖<span class="not"> Community</span></a></button><br>
-               <button><a href="">📁<span> Q&A</span></a></button><br>
+            <div class="menu_bar">
+                <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
+                <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
+                <button><a href="/menu/community">📖<span class="not"> Community</span></a></button><br>
+                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
-                <button><a href="">🗑 Log out</a></button><br>
+                <button><a href="/member/logout">🗑 Log out</a></button><br>
             </div>
         </div>
         <!-- 우측/ Comment 부분 -->
@@ -216,6 +216,6 @@
 </div>
 
 
-<script src="resources/js/comment.js"></script>
+<script src="/resources/js/comment.js"></script>
 </body>
 </html>

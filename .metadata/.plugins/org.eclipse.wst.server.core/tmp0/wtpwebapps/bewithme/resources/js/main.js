@@ -82,3 +82,31 @@ function leftPad(value) {
     // }
     return value;
 }
+
+
+const openModalButton = document.getElementById('scheduleAddBtn');
+const modalOverlay = document.querySelector('.modal-overlay');
+const scheduleRegisterBtn= document.getElementById('scheduleRegisterBtn');
+
+openModalButton.addEventListener('click', function() {
+    modalOverlay.style.visibility = 'visible';
+});
+
+modalOverlay.addEventListener('click', function(event) {
+    if (event.target === modalOverlay) {
+        modalOverlay.style.visibility = 'hidden';
+    }
+});
+
+
+scheduleRegisterBtn.addEventListener('click',()=>{
+    let date=document.getElementById('date').value;
+    let url=document.getElementById('url').value;
+    let description=document.getElementById('description').value;
+
+    console.log(date);
+    console.log(url);
+    console.log(description);
+    
+});
+

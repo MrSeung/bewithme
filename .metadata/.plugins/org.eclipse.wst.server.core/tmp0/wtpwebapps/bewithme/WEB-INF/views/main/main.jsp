@@ -14,14 +14,14 @@
         <div class="left">
             <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
-                <button><a href=""> 🏠<span class="not"> Home</span></a></button><br>
-                <button><a href="">📝<span> Subject</span></a></button><br>
-                <button><a href="">📖<span> Community</span></a></button><br>
-                <button><a href="">📁<span> Q&A</span></a></button><br>
+                <button><a href="/menu/home"> 🏠<span class="not"> Home</span></a></button><br>
+                <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
+                <button><a href="/menu/community">📖<span> Community</span></a></button><br>
+                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
-                <button><a href="">🗑 Log out</a></button><br>
+                <button><a href="/member/logout">🗑 Log out</a></button><br>
             </div>
         </div>
 
@@ -74,7 +74,7 @@
                     <div class="like">
                         <div class="like-header">
                             <h3>Like List</h3>
-                            <button>더보기 +</button>
+                            <button type="button" onclick="location.href='/main/likeList'">더보기 +</button>
                         </div>
                         <div class="like-container">
                             <div class="like-content">
@@ -101,7 +101,7 @@
                         <div class="qna">
                             <div class="qna-header">
                                 <h3>Community</h3>
-                                <button>더보기 +</button>
+                                <button type="button" onclick="location.href='/main/community'">더보기 +</button>
                             </div>
                             <div class="qna-content">
                                 <h4>개발</h4>
@@ -193,6 +193,13 @@
                     </tbody>
                 </table>
             </div>
+             <div class="schedule-add">
+                <button id="scheduleAddBtn">
+                    <span class="material-symbols-outlined">
+                        add_circle
+                        </span>
+                </button>
+            </div>
             <div class="schedule">
                 <h4>7월</h4>
                 <p>8일 | 정보처리기사 필기시험</p>
@@ -203,6 +210,25 @@
             </div>
         </div>
     </div>
+
+
+<!-- 모달 -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2>일정 추가</h2>
+            <label for="date">날짜:</label>
+            <input type="date" id="date" required><br><br>
+            <label for="url">url:</label>
+            <input type="text" id="url" required><br><br>
+            <label for="description">내용:</label>
+            <textarea id="description" required></textarea><br><br>
+            <button id="scheduleRegisterBtn">일정 추가</button>
+        </div>
+    </div>
+	
     <script src="/resources/js/main.js"></script>
+    <script type="text/javascript">
+    	const id='<c:out value="${ses.id}"/>';
+    </script>
 </body>
 </html>

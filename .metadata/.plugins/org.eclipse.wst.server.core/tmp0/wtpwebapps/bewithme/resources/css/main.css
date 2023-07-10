@@ -110,7 +110,7 @@ body {
 
 .sebu a {
   font-size: 17px;
-  font-family: AppleSDGothicNeoR;
+  font-family: AppleSDGothicNeoB;
   color: white;
   text-decoration: none;
 }
@@ -400,7 +400,7 @@ a {
   height: 73vh;
   position: fixed;
   top: 50%;
-  left: 91.5%;
+  left: 90%;
   transform: translate(-50%, -50%);
   padding: 1%;
   border-radius: 40px;
@@ -408,7 +408,7 @@ a {
 
 .right>div {
   height: auto;
-  width: 90%;
+  width: 70%;
   margin: 0px;
   padding: 3%;
   margin: 0 auto;
@@ -471,6 +471,19 @@ td {
   cursor: pointer;
 }
 
+.schedule-add{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FFAC4D
+}
+
+.schedule-add button{
+  border-radius: 10px;
+  color: #FFAC4D;
+  background-color: inherit;
+  cursor: pointer;
+}
+
 .schedule {
   margin-bottom: 20px;
 }
@@ -483,3 +496,25 @@ td {
   margin-bottom: 20px;
   font-size: 14px;
 }
+
+        /* 모달 폼을 화면 정중앙에 배치하기 위한 CSS */
+        .modal-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 배경을 투명하게 만듦 */
+            z-index: 9999;
+            visibility: hidden;
+        }
+        
+        .modal {
+            background-color: #17181F;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
