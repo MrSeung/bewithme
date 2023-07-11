@@ -16,7 +16,7 @@
             <div class="menu_bar">
                 <button><a href=""> 🏠<span class="not"> Home</span></a></button><br>
                 <button><a href="">📝<span> Subject</span></a></button><br>
-                <button><a href="">📖<span> Community</span></a></button><br>
+                <button><a href="/community/communitypage">📖<span> Community</span></a></button><br>
                 <button><a href="">📁<span> Q&A</span></a></button><br>
             </div>
             <div class="sebu">

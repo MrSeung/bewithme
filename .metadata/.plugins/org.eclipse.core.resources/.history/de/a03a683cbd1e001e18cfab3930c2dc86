@@ -1,0 +1,18 @@
+package com.bewithme.www.service;
+
+import javax.inject.Inject;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+import com.bewithme.www.repository.CommunityDAO;
+
+@Service
+public class CommunityServiceImpl implements CommunityService{
+
+	private static final Logger log = LoggerFactory.getLogger(CommunityServiceImpl.class);
+	
+	@Inject
+	private CommunityDAO cdao;
+}
