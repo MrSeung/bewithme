@@ -110,13 +110,13 @@
                         </div>
                         <div class="todo">
                             <div class="todo-header">
-                                <h3>ToDo</h3>
-                                <input type="text">
-                                <button><span class="material-symbols-outlined">
+                                <h3 id="todoTitle">ToDo</h3>
+                                <input id="todo-content" type="text">
+                                <button id="todoBtn"><span class="material-symbols-outlined">
                                         add
                                     </span></button>
                             </div>
-                            <div class="todo-container">
+                            <div id="todo-container" class="todo-container">
                                 <div class="todo-content">
                                     <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
@@ -193,6 +193,7 @@
                     </tbody>
                 </table>
             </div>
+            
              <div class="schedule-add">
                 <button id="scheduleAddBtn">
                     <span class="material-symbols-outlined">
@@ -200,6 +201,7 @@
                         </span>
                 </button>
             </div>
+            <div id="schedule-container" class="schedule-container">
             <div class="schedule">
                 <h4>7월</h4>
                 <p>8일 | 정보처리기사 필기시험</p>
@@ -208,11 +210,13 @@
                 <h4>9월</h4>
                 <p>9일 | SQLD 시험</p>
             </div>
+            </div>
+            
         </div>
     </div>
 
 
-<!-- 모달 -->
+	<!-- 스케줄 추가 모달 -->
     <div class="modal-overlay">
         <div class="modal">
             <h2>일정 추가</h2>
@@ -225,10 +229,25 @@
             <button id="scheduleRegisterBtn">일정 추가</button>
         </div>
     </div>
+    
+    <!-- todo list 모달 -->
+	<div id="todoModal" class="todo-modal">
+	    <div class="todo-modal-content">
+	      <div class="todo-modal-title">TODO LIST</div>
+	      <input type="text" class="todo-modal-input" id="todoModalInput" placeholder="정보를 입력하세요">
+	      <button class="todo-modal-button" id="todoModalAddButton">ADD</button>
+	      <div class="todo-modal-list" id="todoModalList">
+	      	<!-- todo list 출력되는 부분 -->
+	      </div>
+	    </div>
+  	</div>
+	
 	
     <script src="/resources/js/main.js"></script>
     <script type="text/javascript">
-    	const id='<c:out value="${ses.id}"/>';
+    	schedulePrint();
+    	todoPrint();
+    	const id="${ses.id}";
     </script>
 </body>
 </html>

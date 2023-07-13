@@ -1,0 +1,9 @@
+package com.bewithme.www.repository;
+
+import com.bewithme.www.domain.CalendarVO;
+
+public interface CalendarDAO {
+
+	int insertSchedule(CalendarVO cal);
+
+}

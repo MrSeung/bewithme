@@ -52,7 +52,7 @@ public class UserController {
 		if(isUser != null) {
 			HttpSession ses = request.getSession();
 			ses.setAttribute("ses", isUser);  //세션에 객체 담기
-			ses.setMaxInactiveInterval(60*10); //로그인 유지시간 
+			ses.setMaxInactiveInterval(60*100); //로그인 유지시간 
 			m.addAttribute("user", isUser);
 			log.info("로그인 성공!");
 			isOk=1;

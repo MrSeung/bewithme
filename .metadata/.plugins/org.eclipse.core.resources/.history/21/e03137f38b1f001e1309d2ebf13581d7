@@ -1,0 +1,9 @@
+package com.bewithme.www.service;
+
+import com.bewithme.www.domain.CalendarVO;
+
+public interface CalendarService {
+
+	int insertSchedule(CalendarVO cal);
+
+}
