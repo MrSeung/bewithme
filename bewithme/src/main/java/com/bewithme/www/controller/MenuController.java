@@ -28,5 +28,9 @@ public class MenuController {
 	public String qna() {
 		return "redirect:/qna/qna";
 	}
+	@GetMapping("/qna_admin")
+	public String qna_admin() {
+		return "redirect:/qna/admin";
+	}
 		
 }

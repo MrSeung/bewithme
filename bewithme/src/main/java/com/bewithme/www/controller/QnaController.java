@@ -12,7 +12,12 @@ import lombok.extern.slf4j.Slf4j;
 public class QnaController {
 	
 	@GetMapping("/qna")
-	public String subject(){
+	public String qna(){
 		return "/qna/qna";
+	}
+	
+	@GetMapping("/qna/admin")
+	public String qna_admin(){
+		return "/qna/qna_admin";
 	}
 }

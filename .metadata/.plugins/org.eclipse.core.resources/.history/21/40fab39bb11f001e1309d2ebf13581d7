@@ -1,9 +1,0 @@
-package com.bewithme.www.repository;
-
-import com.bewithme.www.domain.TodoVO;
-
-public interface TodoDAO {
-
-	int insertTodo(TodoVO todo);
-
-}

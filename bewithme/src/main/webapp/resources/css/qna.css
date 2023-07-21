@@ -235,6 +235,7 @@
 .type_msg {
 	border-top: 1px solid #c4c4c4;
 	position: relative;
+	margin-top: 2%;
 }
 
 .msg_send_btn {
@@ -270,7 +271,8 @@
 
 .msg_history {
 	height: 350px;
-	overflow-y: auto;
+	overflow:scroll;
+	/*overflow-y: auto;*/
 }
 .msg_history::-webkit-scrollbar {
   /*  Chrome , Safari , Opera에 사용하는 스크롤 숨기기 */
@@ -289,10 +291,42 @@
   border-top: 1px solid #c4c4c4;
 }
 
-.box {
+.chat_bot {
   width: 20%;
   height: 100%;
   margin: 2.5%;
+  border-radius: 10px;
+  overflow: hidden;
   box-sizing: border-box;
-  background-color: lightgray;
+  background-color: inherit;
+}
+
+.chat_bot_title{
+  width: 100%;
+  height: 65%;
+  padding: 10%;
+  box-sizing: border-box;
+  background-color: #FFAC4D;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.chat_bot_btn{
+  width: 100%;
+  height: 35%;
+  padding: 5%;
+  box-sizing: border-box;
+  background-color: #17181F;
+
+}
+.chat_bot_btn button{
+  width: 100%;
+  height: 100%;
+  background-color: #21222D;
+  color: white;
+  border:none;
+  cursor: pointer;
 }

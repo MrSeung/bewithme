@@ -4,7 +4,7 @@ async function signIn(userData){
     const config={
       method : "post",
       headers : {
-        'content-type' : 'application/json; charser=utf-8'
+        'content-type' : 'application/json; charset=utf-8'
       },
       body:JSON.stringify(userData)
     };

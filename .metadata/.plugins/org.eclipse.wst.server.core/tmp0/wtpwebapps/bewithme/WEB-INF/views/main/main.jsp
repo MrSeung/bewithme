@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +20,14 @@
                 <button><a href="/menu/home"> 🏠<span class="not"> Home</span></a></button><br>
                 <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
                 <button><a href="/menu/community">📖<span> Community</span></a></button><br>
-                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
+                <c:choose>
+                	<c:when test="${ses.id eq 'admin'}">
+                		<button><a href="/menu/qna_admin">📁<span> Q&A</span></a></button><br>            	
+                	</c:when>
+                	<c:otherwise>
+                		<button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>            	
+                	</c:otherwise>
+                </c:choose>
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>

@@ -1,9 +1,0 @@
-package com.bewithme.www.service;
-
-import com.bewithme.www.domain.TodoVO;
-
-public interface TodoService {
-
-	int insertTodo(TodoVO todo);
-
-}

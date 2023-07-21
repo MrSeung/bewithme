@@ -18,3 +18,30 @@
 7월 13, 2023 13:26:46.870 [7212:4756:0713/132646.869:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
 7월 13, 2023 13:34:10.204 [7212:4756:0713/133410.204:ERROR:device_event_log_impl.cc(222)] [13:34:10.204] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
 7월 13, 2023 13:34:46.936 [7212:4756:0713/133446.936:ERROR:interface_endpoint_client.cc(697)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+7월 14, 2023 14:00:28.670 NEW SESSION
+7월 14, 2023 14:00:28.670 [11156:10208:0714/140028.669:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+7월 17, 2023 10:27:01.963 NEW SESSION
+7월 17, 2023 10:27:01.963 [6940:5640:0717/102701.962:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 17, 2023 10:27:01.963 [6940:5640:0717/102701.962:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 17, 2023 11:32:29.834 [6940:5640:0717/113229.834:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 17, 2023 11:32:29.835 [6940:5640:0717/113229.834:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 17, 2023 11:32:29.835 [6940:5640:0717/113229.834:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 17, 2023 11:34:34.434 [6940:5640:0717/113434.434:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 17, 2023 11:34:34.434 [6940:5640:0717/113434.434:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 17, 2023 11:34:34.435 [6940:5640:0717/113434.435:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 17, 2023 11:34:34.851 [6940:5640:0717/113434.850:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 17, 2023 11:34:34.851 [6940:5640:0717/113434.851:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 17, 2023 11:34:34.851 [6940:5640:0717/113434.851:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+
+7월 19, 2023 13:38:30.955 NEW SESSION
+7월 19, 2023 13:38:30.955 [10244:3372:0719/133830.952:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 19, 2023 14:08:48.478 [10244:3372:0719/140848.478:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 19, 2023 15:13:29.528 [10244:3372:0719/151329.528:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 19, 2023 15:18:18.988 [10244:3372:0719/151818.988:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+7월 20, 2023 09:13:48.908 NEW SESSION
+7월 20, 2023 09:13:48.909 [1716:2000:0720/091348.907:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 20, 2023 09:17:40.430 [1716:2000:0720/091740.430:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 20, 2023 09:17:40.430 [1716:2000:0720/091740.430:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost

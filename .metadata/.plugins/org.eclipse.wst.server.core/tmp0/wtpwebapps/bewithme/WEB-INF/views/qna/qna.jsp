@@ -33,14 +33,13 @@
       <div class="inbox_msg">
         <!-- 채팅 창 -->
         <div class="mesgs">
-          <div class="msg_history">
+          <div id="msg_history" class="msg_history">
             <div class="incoming_msg">
               <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
               </div>
               <div class="received_msg">
                 <div class="received_withd_msg">
-                  <p>Test which is a new approach to have all
-                    solutions</p>
+                  <p>안녕하세요. ${ses.nickname}님 무엇을 도와드릴까요?</p>
                   <span class="time_date"> 11:01 AM | June 9</span>
                 </div>
               </div>
@@ -83,11 +82,11 @@
           </div>
           <div class="type_msg">
             <div class="input_msg_write">
-              <input type="text" class="write_msg" placeholder="Type a message" />
-              <button class="msg_send_btn" type="button"><span class="material-symbols-outlined">
+              <input type="text" id="write_msg" class="write_msg" placeholder="Type a message" onkeypress="enterkey(event)"/>
+              <button id="msg_send_btn" class="msg_send_btn" type="button"><span class="material-symbols-outlined">
                 send
                 </span></button>
-              <button class="img_send_btn" type="button"><span class="material-symbols-outlined">
+              <button id="img_send_btn" class="img_send_btn" type="button"><span class="material-symbols-outlined">
                 add_a_photo
                 </span></button>
             </div>
@@ -95,15 +94,18 @@
         </div>
       </div>
 
-      <div class="bottom">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <div id="chatBotContainer" class="bottom">
+     
       </div>
-    </div>
 
   </div>
-
+  <script type="text/javascript" src="/resources/js/qna.js"></script>
+	<script type="text/javascript">
+		const userId = "${ses.id}";
+		const nickname="${ses.nickname}";
+		getMsgList(userId);
+/* 		scrollBottom(); */
+		printChatBotList();
+	</script>
 </body>
 </html>
