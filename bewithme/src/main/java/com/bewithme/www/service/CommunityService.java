@@ -5,13 +5,28 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.bewithme.www.domain.CommunityVO;
+import com.bewithme.www.domain.Community_LikeVO;
 
 public interface CommunityService {
 
 	int insertCommunity(CommunityVO cvo);
 
-	List<CommunityVO> selectComunnityList();
+	List<CommunityVO> selectComunnityListByLatest();
+	
+	List<CommunityVO> selectComunnityListByPopularity();	
 
 	List<CommunityVO> selectRecommendList();
+
+	CommunityVO detailCommunity(int com_num);
+
+	int updateCommunityCount(int com_num);
+
+	int updateCommunityLike(Community_LikeVO clvo);
+
+	int selectCommentCnt(int com_num);
+
+	List<Integer> getLikeCommentCnt(String id);
+
+
 
 }

@@ -1,9 +1,0 @@
-package com.bewithme.www.repository;
-
-import com.bewithme.www.domain.CommunityVO;
-
-public interface CommunityDAO {
-
-	int insert(CommunityVO cvo);
-
-}

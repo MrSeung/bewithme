@@ -142,13 +142,12 @@ body{
 /* 왼쪽 상단(게시글 작성) */
 .head{
    width: 100%;
-   height: 40px;
+   height: 30px;
    font-size: 15px;
    padding-left: 5px;
-   margin-bottom: 15%;
    display: flex;
 }
-
+ 
 .head>a:hover{
 	cursor: pointer;	
 }
@@ -168,15 +167,21 @@ body{
 
  
 /* 왼쪽 하단 */
-.wleft>div:not(.head .category){
+.wleft>.head{
+	width: 80%; 
+   	height: 55px;      
+   	margin: 5px 0 0 5px;    
+} 
+
+.wleft>div:not(.head:first-child){ 
    width: 80%; 
-   height: 60px;     
-   margin: 5px 0 25px 15px; 
+   height: 55px;       
+   margin: 0px 0 25px 15px;   
    font-size: 15px; 
 }  
     
 
-.wleft input:not(#category1 #category2){
+.wleft input:not(#category1#category2){
     width: 100%;
     height: 60%;
    	border: 1px solid white;
@@ -242,7 +247,7 @@ body{
 .wtitle { 
     display: flex;
     height: 40px;
-    margin-bottom: 5%; 
+    margin-bottom: 2%;   
 }
 .wtitle>h4{
    display: inline-block;
@@ -268,3 +273,4 @@ body{
 .wbutton:hover {
     background-color: #6c3483;
 }
+

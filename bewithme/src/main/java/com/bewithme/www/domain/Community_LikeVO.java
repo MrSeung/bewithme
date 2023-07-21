@@ -36,11 +36,18 @@ public class Community_LikeVO { //커뮤니티 게시글 좋아요
 	//생성자
 	public Community_LikeVO() {}
 	
+	public Community_LikeVO(String id, int com_num) {
+		//insert
+		this.id = id;
+		this.com_num = com_num;
+	}
+	
 	public Community_LikeVO(int num, String id, int com_num) {
 		this.num = num;
 		this.id = id;
 		this.com_num = com_num;
 	}
+	
 	
 	
 	

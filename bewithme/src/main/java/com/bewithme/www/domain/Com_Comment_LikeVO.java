@@ -41,5 +41,12 @@ public class Com_Comment_LikeVO { //커뮤니티 댓글 좋아요
 		this.com_com_num = com_com_num;
 	}
 	
+	public Com_Comment_LikeVO(String id, int com_com_num) {
+		this.id = id;
+		this.com_com_num = com_com_num;
+	}
+	
+	
+	
 	
 }

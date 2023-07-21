@@ -24,6 +24,7 @@ async function postCommunityToServer(cmuData){
 document.getElementById('subBtn').addEventListener('click',()=>{
 	const com_title =  document.getElementById('com_title').value;
 	const com_content = document.getElementById('summernote').value;
+	console.log(document.getElementById("nickname").value);
 	
 	//라디오박스 value가져오기
 	let com_category = '';
@@ -49,6 +50,7 @@ document.getElementById('subBtn').addEventListener('click',()=>{
 		let cmuData = { 
 			com_title : com_title,
             id : document.getElementById("id").value,
+			nickname : document.getElementById("nickname").value,
             com_category : com_category,
             com_content : com_content
 		};

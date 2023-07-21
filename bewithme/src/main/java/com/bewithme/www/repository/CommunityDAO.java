@@ -2,14 +2,30 @@ package com.bewithme.www.repository;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.bewithme.www.domain.CommunityVO;
 
 public interface CommunityDAO {
 
 	int insert(CommunityVO cvo);
 
-	List<CommunityVO> selectList();
+	List<CommunityVO> selectListByLatest();
+	
+	List<CommunityVO> selectListByPopularity();
 
-	List<CommunityVO> selectReList();
+	List<CommunityVO> selectRecommendList();
+
+	CommunityVO selectOne(int com_num);
+
+	int updateCom_cnt(int com_num);
+
+	int updateLike(@Param("com_num") int com_num, @Param("com_like_cnt") int com_like_cnt);
+
+	int updateCom_comment_cntUp(int com_num);
+
+	int updateCom_comment_cntDown(int com_num);
+
+
 
 }

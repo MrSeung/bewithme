@@ -17,13 +17,18 @@
 <link href="/resources/css/register.css" rel="stylesheet">
 <script>
 $(document).ready(function() {
-     $('#summernote').summernote({
-           placeholder: 'content',
-           minHeight: 370,
-           maxHeight: null,
-           focus: true, 
-           lang : 'ko-KR'
-     });
+	
+	var setting = {
+			placeholder: 'content',
+	        height: 450,  
+	        minHeight: 370,
+	        maxHeight: 500,
+	        focus: true, 
+	        lang : 'ko-KR'
+	};
+	
+    $('#summernote').summernote(setting);
+     
    });
 </script>
 <title>register</title>
@@ -71,7 +76,7 @@ $(document).ready(function() {
                
                <div>
                   <p>닉네임</p>
-                  <input type="text" value="유저" readonly="readonly">
+                  <input type="text" id="nickname" value="임의 닉네임" >
                   <input type="hidden" id="id" value="1111">
                </div>
                
