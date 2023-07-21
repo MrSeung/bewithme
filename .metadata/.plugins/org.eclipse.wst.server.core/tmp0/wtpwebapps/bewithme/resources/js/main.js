@@ -85,6 +85,7 @@ function leftPad(value) {
     return value;
 }
 
+<<<<<<< HEAD
 
 
 //---------------------------------------------------------------------------------------
@@ -459,3 +460,5 @@ document.getElementById('todoModalAddButton').addEventListener('click',()=>{
         });
     }
 });
+=======
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <session version="1.0">
 <refactoring accessors="true" comment="Delete element from project &apos;bewithme&apos;&#x0D;&#x0A;- Original project: &apos;bewithme&apos;&#x0D;&#x0A;- Original element: &apos;com.bewithme.www.repository.CalendarDAO.java&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.repository{CalendarDAO.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1689035354824" subPackages="false" version="1.0"/>
+=======
+<session version="1.0">&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;bewithme&apos;&#x0D;&#x0A;- Original project: &apos;bewithme&apos;&#x0D;&#x0A;- Original element: &apos;summernote-lite.css&apos;" description="Delete element" element1="src/main/webapp/resources/css/summernote-lite.css" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1689123221347" subPackages="false" version="1.0"/>&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;bewithme&apos;&#x0D;&#x0A;- Original project: &apos;bewithme&apos;&#x0D;&#x0A;- Original element: &apos;summernote-lite.js&apos;" description="Delete element" element1="src/main/webapp/resources/js/summernote-lite.js" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1689123229683" subPackages="false" version="1.0"/>
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
 </session>

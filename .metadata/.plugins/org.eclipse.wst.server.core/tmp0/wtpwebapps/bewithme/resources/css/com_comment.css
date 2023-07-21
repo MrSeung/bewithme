@@ -229,9 +229,10 @@ body{
     width: 100%;
     height: fit-content;
     padding: 50px 5px 80px 5px;
-    font-size: 18px;
+    font-size: 15px; 
+    min-height: 200px;  
 }
-
+ 
 /* 댓글 */
 .comment{
     width: 100%;
@@ -317,7 +318,10 @@ body{
     /* 댓글 전체 */
     margin-top: 40px;
     width: 100%;
+<<<<<<< HEAD
     height: 500px;
+=======
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
 }
 
 .comment_content{
@@ -331,6 +335,48 @@ body{
     color: #A4A4A4;
 }
 
+<<<<<<< HEAD
+#modBtn,#delBtn {
+	/* 댓글 닉네임, 수정/삭제버튼 */
+	color: #A4A4A4;   
+	font-size: 15px;
+=======
+.comment_content>div>.nickname{
+	/* 댓글 유저 닉네임 */
+	color: #FFAC4D;   
+}
+ 
+ 
+.modBtn,.delBtn {
+	/* 댓글 수정/삭제버튼 */
+	color: #A4A4A4;   
+	font-size: 13px;
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+    border: none;
+    background-color: inherit;
+    margin-left: 2px; 
+    font-family: "AppleSDGothicNeoR"; 
+}  
+
+<<<<<<< HEAD
+#modBtn{ 
+	margin-left: 10px; 
+}
+
+#modBtn:hover,#delBtn:hover{
+=======
+.modBtn{ 
+	margin-left: 10px; 
+	margin-right: 5px;
+}
+
+.modBtn:hover,.delBtn:hover{
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+    cursor: pointer;
+    color: white; 
+}
+
+<<<<<<< HEAD
 .comment_content>div:nth-child(2){
     /* 댓글 내용 */
     color: white;
@@ -339,6 +385,28 @@ body{
 }
 
 .comment_content>div:nth-child(3){
+=======
+#cmtTextMod{
+    /* 댓글 내용 */  
+    color: white;
+    margin: 20px 0;
+    width: 80%;
+    height: 10%; 
+    background-color: inherit;
+    border: none;
+    font-size: 15px;  
+    font-family: "AppleSDGothicNeoR"; 
+}
+
+#cmtTextMod:focus{
+	border-bottom: 1px solid #6C72CD;
+	outline: none;  
+	font-size: 15px;
+}
+
+
+.comment_content>div:nth-of-type(2){ 
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
     /* 댓글 날짜, 좋아요 등 */
     display: flex;
     justify-content: space-between;
@@ -346,7 +414,11 @@ body{
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 .comment_content>div:nth-child(3)>button{
+=======
+.like_button{ 
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
     color: white;
     border: none;
     background-color: inherit;
@@ -355,12 +427,20 @@ body{
 .like_button:hover{
     /* 댓글 좋아요버튼 (하트) */
     cursor: pointer;
+<<<<<<< HEAD
+=======
+    color: #FFAC4D; 
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
 }
 
 .comment_line{
     /* 구분선 */
     border-bottom: 1px solid #808080;
+<<<<<<< HEAD
     margin-bottom: 35px;
+=======
+    margin-bottom: 15px;
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
 }
 
 /* 올라가는 버튼 */

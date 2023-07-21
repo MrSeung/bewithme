@@ -17,6 +17,7 @@
         <div class="left">
             <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
+<<<<<<< HEAD
                 <button><a href="/menu/home"> 🏠<span class="not"> Home</span></a></button><br>
                 <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
                 <button><a href="/menu/community">📖<span> Community</span></a></button><br>
@@ -28,6 +29,12 @@
                 		<button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>            	
                 	</c:otherwise>
                 </c:choose>
+=======
+                <button><a href=""> 🏠<span class="not"> Home</span></a></button><br>
+                <button><a href="">📝<span> Subject</span></a></button><br>
+                <button><a href="/community/communitypage">📖<span> Community</span></a></button><br>
+                <button><a href="">📁<span> Q&A</span></a></button><br>
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>

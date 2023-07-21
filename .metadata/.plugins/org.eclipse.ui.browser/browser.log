@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 7월 12, 2023 10:23:11.183 NEW SESSION
 7월 12, 2023 10:23:11.183 [1712:1424:0712/102311.179:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
 
@@ -45,3 +46,84 @@
 7월 20, 2023 09:13:48.909 [1716:2000:0720/091348.907:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
 7월 20, 2023 09:17:40.430 [1716:2000:0720/091740.430:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
 7월 20, 2023 09:17:40.430 [1716:2000:0720/091740.430:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+=======
+7월 10, 2023 10:41:26.24 NEW SESSION
+7월 10, 2023 10:41:26.24 [1532:12412:0710/104126.023:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 10, 2023 10:41:26.24 [1532:12412:0710/104126.023:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 10, 2023 10:41:26.222 [1532:12412:0710/104126.222:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 10, 2023 10:41:26.222 [1532:12412:0710/104126.222:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 10, 2023 10:41:26.954 [1532:12412:0710/104126.954:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 10, 2023 10:41:26.954 [1532:12412:0710/104126.954:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 10, 2023 10:41:27.235 [1532:12412:0710/104127.235:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 10, 2023 10:41:27.235 [1532:12412:0710/104127.235:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 10, 2023 11:37:41.28 [1532:12412:0710/113741.028:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:41.130 [1532:12412:0710/113741.130:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:41.248 [1532:12412:0710/113741.247:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:41.368 [1532:12412:0710/113741.368:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:41.490 [1532:12412:0710/113741.490:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:41.599 [1532:12412:0710/113741.599:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:41.788 [1532:12412:0710/113741.788:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:41.956 [1532:12412:0710/113741.955:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:42.244 [1532:12412:0710/113742.244:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:43.229 [1532:12412:0710/113743.229:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:43.539 [1532:12412:0710/113743.539:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:37:44.180 [1532:12412:0710/113744.180:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 11:39:49.424 [1532:12412:0710/113949.424:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.912 s for first_image_paint 0.897 s
+7월 10, 2023 13:15:16.533 [1532:12412:0710/131516.532:ERROR:interface_endpoint_client.cc(697)] Message 5 rejected by interface blink.mojom.WidgetHost
+
+7월 11, 2023 09:53:34.336 NEW SESSION
+7월 11, 2023 09:53:34.336 [4196:9300:0711/095334.336:ERROR:interface_endpoint_client.cc(697)] Message 5 rejected by interface blink.mojom.WidgetHost
+7월 11, 2023 10:57:25.831 [4196:9300:0711/105725.831:ERROR:interface_endpoint_client.cc(697)] Message 0 rejected by interface blink.mojom.WidgetHost
+7월 11, 2023 11:14:05.812 [4196:9300:0711/111405.812:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:05.914 [4196:9300:0711/111405.914:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:06.17 [4196:9300:0711/111406.016:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:06.127 [4196:9300:0711/111406.126:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:06.245 [4196:9300:0711/111406.245:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:06.482 [4196:9300:0711/111406.482:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:06.692 [4196:9300:0711/111406.692:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:06.991 [4196:9300:0711/111406.991:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:07.261 [4196:9300:0711/111407.261:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:07.983 [4196:9300:0711/111407.983:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:09.610 [4196:9300:0711/111409.610:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:09.728 [4196:9300:0711/111409.728:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:09.851 [4196:9300:0711/111409.851:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:10.634 [4196:9300:0711/111410.634:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:10.746 [4196:9300:0711/111410.746:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:10.869 [4196:9300:0711/111410.869:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:10.980 [4196:9300:0711/111410.980:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:11.211 [4196:9300:0711/111411.211:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:11.327 [4196:9300:0711/111411.327:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:11.445 [4196:9300:0711/111411.445:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:11.794 [4196:9300:0711/111411.794:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:11.926 [4196:9300:0711/111411.926:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:12.36 [4196:9300:0711/111412.036:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 11:14:12.679 [4196:9300:0711/111412.679:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.274 s for first_image_paint 0.253 s
+7월 11, 2023 12:52:43.562 [4196:9300:0711/125243.561:ERROR:interface_endpoint_client.cc(697)] Message 5 rejected by interface blink.mojom.WidgetHost
+7월 11, 2023 15:11:13.925 [4196:9300:0711/151113.925:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 106 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+
+7월 13, 2023 14:50:33.694 NEW SESSION
+7월 13, 2023 14:50:33.694 [10000:5928:0713/145033.693:ERROR:interface_endpoint_client.cc(697)] Message 5 rejected by interface blink.mojom.WidgetHost
+
+7월 19, 2023 13:38:34.428 NEW SESSION
+7월 19, 2023 13:38:34.428 [7128:9408:0719/133834.427:ERROR:interface_endpoint_client.cc(697)] Message 5 rejected by interface blink.mojom.WidgetHost
+7월 19, 2023 14:21:14.21 [7128:9408:0719/142114.021:ERROR:page_load_metrics_update_dispatcher.cc(66)] Received null navigation_start.
+7월 19, 2023 14:21:22.443 [7128:9408:0719/142122.443:ERROR:page_load_metrics_update_dispatcher.cc(66)] Received null navigation_start.
+
+7월 20, 2023 11:23:38.663 NEW SESSION
+7월 20, 2023 11:23:38.663 [11452:684:0720/112338.662:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 20, 2023 11:42:21.963 [11452:684:0720/114221.963:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 20, 2023 11:42:21.963 [11452:684:0720/114221.963:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 20, 2023 13:56:55.433 [11452:684:0720/135655.432:ERROR:interface_endpoint_client.cc(697)] Message 0 rejected by interface blink.mojom.WidgetHost
+7월 20, 2023 14:06:30.67 [11452:684:0720/140630.067:ERROR:interface_endpoint_client.cc(697)] Message 5 rejected by interface blink.mojom.WidgetHost
+7월 20, 2023 14:41:21.727 [7840:9912:0720/144121.727:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+
+7월 21, 2023 09:19:38.938 NEW SESSION
+7월 21, 2023 09:19:38.938 [11288:4324:0721/091938.937:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+
+7월 21, 2023 10:59:51.49 NEW SESSION
+7월 21, 2023 10:59:51.49 [2788:600:0721/105951.048:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+
+7월 21, 2023 12:41:45.938 NEW SESSION
+7월 21, 2023 12:41:45.938 [7320:6484:0721/124145.937:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 21, 2023 12:44:22.976 [6920:1424:0721/124422.976:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
