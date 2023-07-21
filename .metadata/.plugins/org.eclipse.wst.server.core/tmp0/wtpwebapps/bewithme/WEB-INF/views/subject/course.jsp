@@ -7,17 +7,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>course</title>
-    <link rel="stylesheet" href="resources/css/menu.css">
-    <link rel="stylesheet" href="resources/css/course.css">
+    <link rel="stylesheet" href="/resources/css/menu.css">
+    <link rel="stylesheet" href="/resources/css/course.css">
 </head>
 
 <body>
     <div class="container">
         <div class="left">
-            <img src="resources/img/logo.png" class="logo" alt="">
+            <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
                 <button><a href=""> 🏠<span> Home</span></a></button><br>
-                <button><a href="/subject.html">📝<span class="not"> Subject</span></a></button><br>
+                <button><a href="/subject.jsp">📝<span class="not"> Subject</span></a></button><br>
                 <button><a href="">📖<span > Community</span></a></button><br>
                 <button><a href="">📁<span> Q&A</span></a></button><br>
             </div>
@@ -61,7 +61,7 @@
             <p>VS Code 사이트에 접속해 주세요.</p>
             <p>VS Code 바로가기 <a href="https://code.visualstudio.com/">👉 https://code.visualstudio.com/</a></p>
             <p>사이트에 접속을 하면 다음과 같은 화면이 나타납니다. 빨간색 박스에서 자신의 운영체제에 맞는 옵션을 골라 다운로드하면 됩니다.</p>
-            <img src="resources/img/vs1.png" alt="">
+            <img src="/resources/img/vs1.png" alt="">
 
             <blockquote>
                 🔍 Stable / Insiders 중에 무엇을 다운로드해야 하나요?<br>
@@ -70,9 +70,9 @@
             </blockquote>
 
             <p>다운을 받으면 1)과 같은 파일이 보이는데요. 더블 클릭을 해주면 압축이 해제되면서 2)가 생성됩니다.</p>
-            <img src="resources/img/vs2.png" alt="">
+            <img src="/resources/img/vs2.png" alt="">
             <p>2)를 더블클릭 하면 아래와 같은 창이 뜨며 VS Code를 이용할 수 있습니다.</p>
-            <img src="resources/img/vs3.png" alt="">
+            <img src="/resources/img/vs3.png" alt="">
             <br><br><br>
             <!-- 댓글 -->
 

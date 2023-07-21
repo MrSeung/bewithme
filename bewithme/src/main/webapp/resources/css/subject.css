@@ -61,6 +61,8 @@ hr {
     display: flex;
     margin-left: 10%;
     margin-bottom: 2%;
+
+
 }
 .a {
   display: inline-block;
@@ -75,12 +77,13 @@ hr {
 }
 .a:nth-child(3){
     margin-left: 50px; /* 조절 가능한 여백 */
+
 }
 
 .sj_reg{
     display: inline-block;
     background-color: transparent; /* Remove background color */
-    margin-left: 65%;
+    margin-left: 55%;
     border: none; /* Remove border */
 }
 .sj_a{
@@ -88,6 +91,7 @@ hr {
     color: white;
     font-family: AppleSDGothicNeoB;
     font-size: 17px;
+
 }
 .sj_a:hover{
     font-family: AppleSDGothicNeoB;
@@ -142,7 +146,17 @@ table {
     
   }
   .ck{
-    width: 10%;
+    width: 11%;
+    text-align: center;
+  }
+  .ck2{
+    width: 11%;
+    text-align: center;
+  }
+  .ck2:hover{
+    width: 11%;
+    text-align: center;
+    color: #808080;
   }
   table a{
     text-decoration: none;

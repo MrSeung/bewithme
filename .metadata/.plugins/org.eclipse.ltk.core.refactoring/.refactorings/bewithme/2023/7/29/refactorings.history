@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.bewithme.www.controller.CouCommentController.java&apos; to &apos;Cou_CommentController.java&apos;&#x0D;&#x0A;- Original project: &apos;bewithme&apos;&#x0D;&#x0A;- Original element: &apos;com.bewithme.www.controller.CouCommentController.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.bewithme.www.controller.Cou_CommentController.java&apos;" description="Rename compilation unit &apos;CouCommentController.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.controller{CouCommentController.java" name="Cou_CommentController.java" references="false" stamp="1689812865928" version="1.0"/>
+</session>
