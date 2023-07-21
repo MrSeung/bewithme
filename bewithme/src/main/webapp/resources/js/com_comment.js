@@ -15,8 +15,6 @@ nav_buttons.forEach(button => {
 
   });
 });
-
-<<<<<<< HEAD
 // -- 빈 하트를 누르면 진한 하트로 변경 (반대도 가능)
   // (가까운 하트 버튼이 반응하도록 설정했음)
   var likeButtons = document.getElementsByClassName("like_button");
@@ -55,7 +53,6 @@ nav_buttons.forEach(button => {
     
   
   }
-=======
 
 
 // -- 댓글 좋아요 버튼 -- 
@@ -325,4 +322,3 @@ document.addEventListener('click', (e)=>{
 
 	}
 })
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193

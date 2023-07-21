@@ -1,18 +1,7 @@
 INDEX VERSION 1.4+D:\_spring_workspace\bewithme_team\bewithme\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 3433496751.index
 178914745.index
-<<<<<<< HEAD
 3715623501.index
-=======
-<<<<<<< HEAD
-3715623501.index
-=======
-<<<<<<< HEAD
-3715623501.index
-=======
->>>>>>> origin/dev
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
->>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 1777028281.index
 1127277670.index
 4097337187.index

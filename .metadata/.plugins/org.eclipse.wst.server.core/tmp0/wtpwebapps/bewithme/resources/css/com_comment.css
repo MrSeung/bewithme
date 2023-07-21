@@ -377,7 +377,7 @@ body{
 }
 
 <<<<<<< HEAD
-.comment_content>div:nth-child(2){
+.comment_content>div:nth-child(2)>input{
     /* 댓글 내용 */
     color: white;
     margin: 20px 0;
