@@ -1,10 +1,10 @@
 @font-face {
     font-family:AppleSDGothicNeoB;
-    src: url(/font/AppleSDGothicNeoB.ttf);
+    src: url(/resources/font/AppleSDGothicNeoB.ttf);
 }
 @font-face {
     font-family: AppleSDGothicNeoR;
-    src: url(/font/AppleSDGothicNeoR.ttf);
+    src: url(/resources/font/AppleSDGothicNeoR.ttf);
 }
 body{
     color: white;

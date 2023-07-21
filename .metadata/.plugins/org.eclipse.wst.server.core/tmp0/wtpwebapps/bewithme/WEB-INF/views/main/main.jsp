@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<<<<<<< HEAD
  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+=======
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
+    
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,14 +21,28 @@
         <div class="left">
             <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
+<<<<<<< HEAD
+                <button><a href="/menu/home"> 🏠<span class="not"> Home</span></a></button><br>
+                <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
+                <button><a href="/menu/community">📖<span> Community</span></a></button><br>
+                <c:choose>
+                	<c:when test="${ses.id eq 'admin'}">
+                		<button><a href="/menu/qna_admin">📁<span> Q&A</span></a></button><br>            	
+                	</c:when>
+                	<c:otherwise>
+                		<button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>            	
+                	</c:otherwise>
+                </c:choose>
+=======
                 <button><a href=""> 🏠<span class="not"> Home</span></a></button><br>
                 <button><a href="">📝<span> Subject</span></a></button><br>
-                <button><a href="">📖<span> Community</span></a></button><br>
+                <button><a href="/community/communitypage">📖<span> Community</span></a></button><br>
                 <button><a href="">📁<span> Q&A</span></a></button><br>
+>>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
-                <button><a href="">🗑 Log out</a></button><br>
+                <button><a href="/member/logout">🗑 Log out</a></button><br>
             </div>
         </div>
 
@@ -81,7 +101,7 @@
                     <div class="like">
                         <div class="like-header">
                             <h3>Like List</h3>
-                            <button>더보기 +</button>
+                            <button type="button" onclick="location.href='/main/likeList'">더보기 +</button>
                         </div>
                         <div class="like-container">
                             <div class="like-content">
@@ -108,7 +128,7 @@
                         <div class="qna">
                             <div class="qna-header">
                                 <h3>Community</h3>
-                                <button>더보기 +</button>
+                                <button type="button" onclick="location.href='/main/community'">더보기 +</button>
                             </div>
                             <div class="qna-content">
                                 <h4>개발</h4>
@@ -117,13 +137,13 @@
                         </div>
                         <div class="todo">
                             <div class="todo-header">
-                                <h3>ToDo</h3>
-                                <input type="text">
-                                <button><span class="material-symbols-outlined">
+                                <h3 id="todoTitle">ToDo</h3>
+                                <input id="todo-content" type="text">
+                                <button id="todoBtn"><span class="material-symbols-outlined">
                                         add
                                     </span></button>
                             </div>
-                            <div class="todo-container">
+                            <div id="todo-container" class="todo-container">
                                 <div class="todo-content">
                                     <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
@@ -200,6 +220,15 @@
                     </tbody>
                 </table>
             </div>
+            
+             <div class="schedule-add">
+                <button id="scheduleAddBtn">
+                    <span class="material-symbols-outlined">
+                        add_circle
+                        </span>
+                </button>
+            </div>
+            <div id="schedule-container" class="schedule-container">
             <div class="schedule">
                 <h4>7월</h4>
                 <p>8일 | 정보처리기사 필기시험</p>
@@ -208,8 +237,44 @@
                 <h4>9월</h4>
                 <p>9일 | SQLD 시험</p>
             </div>
+            </div>
+            
         </div>
     </div>
+
+
+	<!-- 스케줄 추가 모달 -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2>일정 추가</h2>
+            <label for="date">날짜:</label>
+            <input type="date" id="date" required><br><br>
+            <label for="url">url:</label>
+            <input type="text" id="url" required><br><br>
+            <label for="description">내용:</label>
+            <textarea id="description" required></textarea><br><br>
+            <button id="scheduleRegisterBtn">일정 추가</button>
+        </div>
+    </div>
+    
+    <!-- todo list 모달 -->
+	<div id="todoModal" class="todo-modal">
+	    <div class="todo-modal-content">
+	      <div class="todo-modal-title">TODO LIST</div>
+	      <input type="text" class="todo-modal-input" id="todoModalInput" placeholder="정보를 입력하세요">
+	      <button class="todo-modal-button" id="todoModalAddButton">ADD</button>
+	      <div class="todo-modal-list" id="todoModalList">
+	      	<!-- todo list 출력되는 부분 -->
+	      </div>
+	    </div>
+  	</div>
+	
+	
     <script src="/resources/js/main.js"></script>
+    <script type="text/javascript">
+    	schedulePrint();
+    	todoPrint();
+    	const id="${ses.id}";
+    </script>
 </body>
 </html>

@@ -127,7 +127,7 @@ body{
 }
 
 /* 전체, 기술, 상담, MY 선택버튼 */
-.nav>button{
+.navBtns>button{
     width: 70px;
     height: 40px;
 
@@ -145,12 +145,12 @@ body{
     font-weight: 700;
 }
 
-.nav>button:first-child{
+.navBtns>button:first-child{
     background-image : linear-gradient(to bottom right, #6C72CD, #CB68C3), linear-gradient(to bottom right, #6C72CD, #CB68C3);
     font-weight : '700';
 }
 
-.nav>button:hover{
+.navBtns>button:hover{
    cursor: pointer;
 }
 
@@ -233,12 +233,12 @@ body{
 
 /* 추천 질문 하나의 div */
 .recommend_post{
-    width: 30%;
+    width: 30%; 
     height: 160px;
     display: inline-block;
     border: 1px solid white;
     border-radius: 10px;
-    margin-right:4%;
+    margin-right:3.5%;  
     flex-shrink: 0;
 
 }
@@ -259,8 +259,7 @@ body{
 .recommend_post>div:first-child{
     /* 추천 질문 분류 색상 */
     display: inline-block;
-    color: #CB68C3;
-}
+} 
 
 .recommend_post a{
     /* 추천 질문 제목 */
@@ -354,27 +353,36 @@ body{
 /* 출력되는 게시판 */
 .board{
     margin-left: 5px;
-   
 }
+
+
 .content_left{
     display: inline-block;
     width: 80%;
+    height: 120px; 
 }
-.content_left>.title{
+.content_left>.title>a{
     font-size: 25px;
     margin-bottom: 10px;
+    text-decoration: none;
+    color: white; 
 }
-.content_left>.title:hover{
+.content_left>.title>a:hover{
     text-decoration: underline;
 }
 
 .content_left>.reaction>div{
     display: inline;
-    font-size: 12px;
+    font-size: 13px; 
     color: 	#F6F6F6;
+}  
+
+.reaction{
+	color: 	#F6F6F6;
 }
+  
 .content{
-    margin: 20px 0;
+    margin-top: 20px;
     color: #E2E2E2;
     white-space: normal;
     display: -webkit-box;
@@ -388,8 +396,8 @@ body{
     display: flex;
     justify-content: space-between;
     width: 75%;
-    margin-bottom: 20px;
-}
+    margin-bottom: 30px; 
+} 
 
 .content_bottom>button{
     width: 20px;
@@ -400,8 +408,10 @@ body{
 }
 
 .content_bottom>button:hover{
-    cursor: pointer;
+    cursor: pointer; 
+    color: #FFAC4D;
 }
+ 
 
 .content_bottom>span{
     color: 	#A4A4A4;
@@ -411,9 +421,8 @@ body{
 /* 이미지 */
 .content_right{
     width: 20%;
-    float: right;
-    display: inline;
-    margin-top: 10px;
+    float: right; 
+    display: inline;  
     text-align: center;
 }
 .content_right>img{

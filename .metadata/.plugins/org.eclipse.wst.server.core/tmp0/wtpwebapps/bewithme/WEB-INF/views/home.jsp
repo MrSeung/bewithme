@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page session="true" %>
 <html>
 <head>
 	<title>Home</title>
@@ -23,10 +25,10 @@
                 </div>
               </div>
               <span>or use your email for registration</span>
-              <input type="text" placeholder="Name">
-              <input type="email" placeholder="Email">
-              <input type="password" placeholder="Password">
-              <button class="form_btn">Sign Up</button>
+              <input id="signUpId" type="email" name="id" placeholder="Email">
+              <input id="signUpPw" type="password" name="pw" placeholder="Password">
+              <input id="signUpNick" type="text" name="nickname" placeholder="NickName">
+              <button type="button" id="joinBtn" class="form_btn">Sign Up</button>
             </form>
           </div>
           <div class="sign-in-container">
@@ -44,9 +46,9 @@
                 </div>
               </div>
               <span>or use your account</span>
-              <input type="email" placeholder="Email">
-              <input type="password" placeholder="Password">
-              <button class="form_btn">Sign In</button>
+              <input id="signInId" type="email" name="id" placeholder="Email">
+              <input id="signInPw" type="password" name="pw" placeholder="Password">
+              <button type="button" id="loginBtn" class="form_btn">Sign In</button>
             </form>
           </div>
           <div class="overlay-container">

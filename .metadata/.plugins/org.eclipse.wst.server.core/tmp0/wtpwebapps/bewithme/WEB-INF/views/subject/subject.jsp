@@ -7,22 +7,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subject</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="/resources/css/menu.css?after">
     <link rel="stylesheet" href="/resources/css/subject.css?after">
+=======
+    <link rel="stylesheet" href="/resources/css/menu.css">
+    <link rel="stylesheet" href="/resources/css/subject.css">
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 </head>
 <body>
     <div class="container">
         <div class="left">
             <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
+<<<<<<< HEAD
                 <button><a href=""> 🏠<span> Home</span></a></button><br>
                 <button><a href="/sj/subject">📝<span class="not"> Subject</span></a></button><br>
                 <button><a href="">📖<span > Community</span></a></button><br>
                 <button><a href="">📁<span> Q&A</span></a></button><br>
+=======
+                <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
+                <button><a href="/menu/subject">📝<span class="not"> Subject</span></a></button><br>
+                <button><a href="/menu/community">📖<span> Community</span></a></button><br>
+                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
-                <button><a href="">🗑 Log out</a></button><br>
+                <button><a href="/member/logout">🗑 Log out</a></button><br>
             </div>
         
         </div>
