@@ -236,13 +236,32 @@
     <div class="modal-overlay">
         <div class="modal">
             <h2>일정 추가</h2>
-            <label for="date">날짜:</label>
-            <input type="date" id="date" required><br><br>
+            <label for="date">시작일:</label>
+            <input type="date" id="start_date" required><br><br>
+            <label for="date">종료일:</label>
+            <input type="date" id="end_date" required><br><br>
             <label for="url">url:</label>
             <input type="text" id="url" required><br><br>
             <label for="description">내용:</label>
             <textarea id="description" required></textarea><br><br>
             <button id="scheduleRegisterBtn">일정 추가</button>
+        </div>
+    </div>
+    
+    <!-- 스케줄 추가 모달 -->
+    <div class="modal-overlay-modify">
+        <div class="modal-modify">
+            <h2>일정 수정</h2>
+            <label for="date">시작일:</label>
+            <input type="date" id="start_dateM" required><br><br>
+            <label for="date">종료일:</label>
+            <input type="date" id="end_dateM" required><br><br>
+            <label for="url">url:</label>
+            <input type="text" id="urlM" required><br><br>
+            <label for="description">내용:</label>
+            <textarea id="descriptionM" required></textarea><br><br>
+            <input type="hidden" id="calNum">
+            <button id="scheduleModifyBtn">수정완료</button>
         </div>
     </div>
     
@@ -264,6 +283,7 @@
     	schedulePrint();
     	todoPrint();
     	const id="${ses.id}";
+    	const admin="${ses.admin}";
     </script>
 </body>
 </html>
