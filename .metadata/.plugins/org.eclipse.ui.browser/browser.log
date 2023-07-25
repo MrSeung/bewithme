@@ -1,5 +1,18 @@
 
 <<<<<<< HEAD
+7월 10, 2023 09:18:25.605 NEW SESSION
+7월 10, 2023 09:18:25.605 [5476:2060:0710/091825.604:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 10, 2023 09:18:30.793 [5476:2060:0710/091830.793:ERROR:device_event_log_impl.cc(222)] [09:18:30.793] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+7월 10, 2023 11:05:42.979 [5476:2060:0710/110542.979:ERROR:interface_endpoint_client.cc(697)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+7월 20, 2023 09:58:06.906 NEW SESSION
+7월 20, 2023 09:58:06.906 [2124:10404:0720/095806.905:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 20, 2023 09:58:06.907 [2124:10404:0720/095806.905:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 20, 2023 09:58:06.907 [2124:10404:0720/095806.905:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+7월 20, 2023 13:09:39.864 [2124:10404:0720/130939.864:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+7월 20, 2023 13:09:57.223 [2124:10404:0720/130957.223:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+=======
+<<<<<<< HEAD
 7월 12, 2023 10:23:11.183 NEW SESSION
 7월 12, 2023 10:23:11.183 [1712:1424:0712/102311.179:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
 
@@ -127,3 +140,4 @@
 7월 21, 2023 12:41:45.938 [7320:6484:0721/124145.937:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
 7월 21, 2023 12:44:22.976 [6920:1424:0721/124422.976:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
 >>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d

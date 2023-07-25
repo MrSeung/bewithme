@@ -46,7 +46,9 @@
                     </a>
                     <div class="subject-content">
                         <div class="subject-header">
-                            <h2>HTML · CSS</h2>
+                   
+                            	<h2><a href="/sj/title/1"> HTML · CSS</a></h2>
+                        	
                             <div class="subject-image"></div>
                         </div>
                         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
@@ -222,6 +224,9 @@
             
         </div>
     </div>
+<<<<<<<< HEAD:.metadata/.plugins/org.eclipse.core.resources/.history/69/303aa8ffe021001e126aba2c10e3c369
+    <script src="/resources/js/main.js"></script>
+========
 
 
 	<!-- 스케줄 추가 모달 -->
@@ -257,5 +262,6 @@
     	todoPrint();
     	const id="${ses.id}";
     </script>
+>>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d:.metadata/.plugins/org.eclipse.core.resources/.history/78/902f15270825001e1675fb11fcd2ee81
 </body>
 </html>

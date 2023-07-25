@@ -1,0 +1,51 @@
+package com.bewithme.www.controller;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.bewithme.www.domain.CourseVO;
+import com.bewithme.www.service.CourseService;
+
+import lombok.extern.slf4j.Slf4j;
+
+
+@RequestMapping("/co/*")
+@Slf4j
+@Controller
+public class CourseController {
+	@Inject
+	private CourseService csv;
+	
+	
+	@GetMapping("/write")
+	public String write(CourseVO cvo) {
+		return "/subject/course_reg";
+	}
+	
+	@PostMapping("/write")
+	public String insertCourse(CourseVO cvo) {
+		log.info("cvo : "+ cvo);
+		csv.insertCourse(cvo);
+		return "/subject/subject";
+	}
+	
+	@GetMapping("/link")
+	public String link(CourseVO cvo) {
+		return "/subject/course";
+	}
+	
+	@GetMapping("/list")
+	public String list(Model m,) {
+		List<CourseVO> list = csv.getList();
+		m.addAttribute("list",list);
+		log.info(">>>list : "+list);
+		return "/subject/subject";
+	}
+}

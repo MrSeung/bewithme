@@ -139,6 +139,21 @@ body{
    margin-right: 20px; 
 }   
 
+<<<<<<< HEAD
+/* 왼쪽 상단(Community작성) */
+.head{
+   width: 100%;
+   height: 40px;
+   font-size: 15px;
+   padding-left: 5px;
+    margin-bottom: 15%;
+    display: flex;
+} 
+
+.head>h4{
+    display: inline;
+   margin-left: 25%;
+=======
 /* 왼쪽 상단(게시글 작성) */
 .head{
    width: 100%;
@@ -155,6 +170,7 @@ body{
 .head>h4{
     display: inline;
   	margin-left: 25%;
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
     font-weight: bold;
 } 
 
@@ -165,6 +181,28 @@ body{
     text-align: center;
 }
 
+<<<<<<< HEAD
+
+
+/* 왼쪽 하단 */
+.wleft>div:not(.head){
+   width: 80%;
+   height: 60px;    
+   margin: 5px 0 25px 15px; 
+    font-size: 15px; 
+}
+  
+
+.wleft input{
+    width: 100%;
+    height: 60%;
+   border: 1px solid white;
+   border-radius: 5px; 
+    padding-left: 5px;   
+} 
+
+.wleft>.title{
+=======
  
 /* 왼쪽 하단 */
 .wleft>.head{
@@ -222,12 +260,18 @@ body{
     
  
 .wleft>.title{  
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
     color: #6C72CD;
 }
 
 .file_list>hr{
+<<<<<<< HEAD
+    margin-top: 60px;
+}
+=======
     margin-top: 20px;
 } 
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 
 .file_list>button{
     width: 100%;
@@ -247,7 +291,11 @@ body{
 .wtitle { 
     display: flex;
     height: 40px;
+<<<<<<< HEAD
+    margin-bottom: 5%; 
+=======
     margin-bottom: 2%;   
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 }
 .wtitle>h4{
    display: inline-block;
@@ -272,5 +320,9 @@ body{
 
 .wbutton:hover {
     background-color: #6c3483;
+<<<<<<< HEAD
+}
+=======
 }
 
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d

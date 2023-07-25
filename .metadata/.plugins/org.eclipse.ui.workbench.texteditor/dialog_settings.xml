@@ -2,9 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 <<<<<<< HEAD
+		<item key="selection" value="bi"/>
+=======
+<<<<<<< HEAD
 		<item key="selection" value="couser"/>
 =======
 >>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
@@ -12,15 +16,24 @@
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
 <<<<<<< HEAD
+			<item value="bi"/>
+			<item value="h4"/>
+=======
+<<<<<<< HEAD
 			<item value="couser"/>
 			<item value=""/>
 =======
 >>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+<<<<<<< HEAD
+		<item key="DIALOG_X_ORIGIN" value="344"/>
+		<item key="DIALOG_Y_ORIGIN" value="268"/>
+=======
 <<<<<<< HEAD
 		<item key="DIALOG_X_ORIGIN" value="824"/>
 		<item key="DIALOG_Y_ORIGIN" value="268"/>
@@ -28,6 +41,7 @@
 		<item key="DIALOG_X_ORIGIN" value="441"/>
 		<item key="DIALOG_Y_ORIGIN" value="263"/>
 >>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+>>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

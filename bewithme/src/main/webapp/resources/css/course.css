@@ -36,23 +36,36 @@ body{
     background-color: transparent;
 }
 
-  
-h1{
+.co_bookmark{
     margin-top: 5%;
-    margin-left: 10%;
+	display: flex;
+	justify-content : space-between;
+    margin-left: 10%; 
+    width: 80%;
+}
+/* 강의명&북마크 */
+h1{
+    display: inline-block;
 }
 
+.bookmarkBtn{
+	margin-left: 50%;
+	border: 0;
+    background-color: transparent;
+}
 
 /* 조회수&날짜 */
 .co_t{
     display: flex;
+    justify-content : space-between;
     margin-left: 10%;
     margin-top: 2%;
     color: #838689;
+    width: 80%;
 }
 .co_t span:nth-child(2){
     display: inline-block;
-    margin-left: 73%;
+    margin-left: 67%;
 }
 /* 박스설명 */
 .ex{
@@ -248,29 +261,48 @@ svg{
     margin-left: 10%;
 }
 
+.nickname{
+	color: #FFAC4D;
+}
+
 .comment_content{
     /* 댓글 하나하나 */
     width: 80%;
     height: fit-content;
 }
 
+/* 댓글 수정할 수 있는 입력 칸 */
+#cou_comment {
+  border: none;
+  /* Optionally, you can add padding and margin to adjust the spacing around the input box */
+   padding: 5px;
+/*   margin: 5px; */
+  background-color: #21222D;
+    /* 댓글 내용 */
+    color: white;
+    margin: 10px 0;
+    width: 80%;
+}
+
+
 .comment_content>div{
-    font-size: 15px;
     color: #A4A4A4;
+    font-size: 15px;
 }
 
 .comment_content>div:nth-child(2){
     /* 댓글 내용 */
-    color: white;
-    margin: 20px 0;
-    width: 80%;
+    color: #A4A4A4;
+/*     margin: 20px 0; */
+/*     width: 80%; */
 }
 
 .comment_content>div:nth-child(3){
     /* 댓글 날짜, 좋아요 등 */
+    color: #A4A4A4;
     display: flex;
-    justify-content: space-between;
-    margin-right: 20px;
+/*     justify-content: space-between; */
+/*     margin-right: 20px; */
     margin-bottom: 10px;
 }
 
@@ -285,8 +317,28 @@ svg{
     cursor: pointer;
 }
 
+/* 댓글 수정&삭제 */
+.modBtn{
+	border: 0;
+  	background-color: transparent;
+/*   	margin-left: 92%; */
+	margin-top : 5px;
+	margin-bottom : 3px;
+	color: #A4A4A4;
+	font-family: "AppleSDGothicNeoR";
+}
+.delBtn{
+	border: 0;
+  	background-color: transparent;
+  	color: #A4A4A4;
+/* 	margin-left: 1%; */
+	font-family: "AppleSDGothicNeoR";
+}
+
+
 .comment_line{
     /* 구분선 */
     border-bottom: 1px solid #808080;
     margin-bottom: 35px;
+    width: 80%;
 }

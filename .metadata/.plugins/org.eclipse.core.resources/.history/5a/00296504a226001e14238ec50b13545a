@@ -1,0 +1,9 @@
+package com.bewithme.www.service;
+
+import com.bewithme.www.domain.Cou_CommentVO;
+
+public interface Cou_CommentService {
+
+	int register(Cou_CommentVO ccvo);
+
+}

@@ -1,0 +1,19 @@
+package com.bewithme.www.service;
+
+import org.springframework.stereotype.Service;
+
+import com.bewithme.www.domain.Cou_CommentVO;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Service
+public class Cou_CommentServiceImpl implements Cou_CommentService {
+
+	@Override
+	public int register(Cou_CommentVO ccvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

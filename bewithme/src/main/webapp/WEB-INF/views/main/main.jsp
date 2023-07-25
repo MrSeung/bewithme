@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-    
-    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,6 @@
         <div class="left">
             <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
-<<<<<<< HEAD
                 <button><a href="/menu/home"> 🏠<span class="not"> Home</span></a></button><br>
                 <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
                 <button><a href="/menu/community">📖<span> Community</span></a></button><br>
@@ -29,12 +28,6 @@
                 		<button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>            	
                 	</c:otherwise>
                 </c:choose>
-=======
-                <button><a href=""> 🏠<span class="not"> Home</span></a></button><br>
-                <button><a href="">📝<span> Subject</span></a></button><br>
-                <button><a href="/community/communitypage">📖<span> Community</span></a></button><br>
-                <button><a href="">📁<span> Q&A</span></a></button><br>
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
@@ -54,18 +47,22 @@
                         </span>
                     </a>
                     <div class="subject-content">
-                        <div class="subject-header">
-                            <h2>HTML · CSS</h2>
+                        <div class="subject-header" >
+                   				<!-- 제목 링크 보내기 -->
+                            	<h2 ><a href="/sj/title?sub_num=1" > HTML · CSS</a></h2>
+                        	
                             <div class="subject-image"></div>
                         </div>
                         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
                             <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
-                          </svg>&nbsp;강의 수: 16강</p>
+                          </svg>&nbsp;강의 수: <c:out value="${count }" /> 강</p>
         
                     </div>
                     <div class="subject-content">
                         <div class="subject-header">
-                            <h2>JAVA (Basic)</h2>
+                        	<!-- 제목 링크 보내기 -->
+                        	<h2><a href="/sj/title?sub_num=2"> JAVASCRIPT</a></h2>
+                            
                             <div class="subject-image"></div>
                         </div>
                         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
@@ -74,7 +71,9 @@
                     </div>
                     <div class="subject-content">
                         <div class="subject-header">
-                            <h2>SPRING</h2>
+                        	<!-- 제목 링크 보내기 -->
+                        	<h2><a href="/sj/title?sub_num=3"> JAVA(Basic)</a></h2>
+                            
                             <div class="subject-image"></div>
                         </div>
                         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
@@ -237,13 +236,32 @@
     <div class="modal-overlay">
         <div class="modal">
             <h2>일정 추가</h2>
-            <label for="date">날짜:</label>
-            <input type="date" id="date" required><br><br>
+            <label for="date">시작일:</label>
+            <input type="date" id="start_date" required><br><br>
+            <label for="date">종료일:</label>
+            <input type="date" id="end_date" required><br><br>
             <label for="url">url:</label>
             <input type="text" id="url" required><br><br>
             <label for="description">내용:</label>
             <textarea id="description" required></textarea><br><br>
             <button id="scheduleRegisterBtn">일정 추가</button>
+        </div>
+    </div>
+    
+    <!-- 스케줄 추가 모달 -->
+    <div class="modal-overlay-modify">
+        <div class="modal-modify">
+            <h2>일정 수정</h2>
+            <label for="date">시작일:</label>
+            <input type="date" id="start_dateM" required><br><br>
+            <label for="date">종료일:</label>
+            <input type="date" id="end_dateM" required><br><br>
+            <label for="url">url:</label>
+            <input type="text" id="urlM" required><br><br>
+            <label for="description">내용:</label>
+            <textarea id="descriptionM" required></textarea><br><br>
+            <input type="hidden" id="calNum">
+            <button id="scheduleModifyBtn">수정완료</button>
         </div>
     </div>
     
@@ -265,6 +283,7 @@
     	schedulePrint();
     	todoPrint();
     	const id="${ses.id}";
+    	const admin="${ses.admin}";
     </script>
 </body>
 </html>
