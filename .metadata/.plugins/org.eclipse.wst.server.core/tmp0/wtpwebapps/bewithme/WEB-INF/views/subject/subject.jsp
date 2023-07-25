@@ -22,7 +22,7 @@
 
                 <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
                 <button><a href="/sj/subject">📝<span class="not"> Subject</span></a></button><br>
-               <!--  <button><a href="/menu/subject">📝<span class="not"> Subject</span></a></button><br> -->
+               <!-- <button><a href="/menu/subject">📝<span class="not"> Subject</span></a></button><br>  -->
                 <button><a href="/menu/community">📖<span> Community</span></a></button><br>
                 <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
 

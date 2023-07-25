@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-INDEX VERSION 1.4+D:\_spring_workspace\bewithme_team\bewithme\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+INDEX VERSION 1.4+D:\_spring_workspace\bewithme_team\bewithme_lee\bewithme\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3315246351.index
 4097337187.index
-1127277670.index
-1777028281.index
-3715623501.index
-3433496751.index
-178914745.index
-=======
-INDEX VERSION 1.4+D:\_spring_workspace\ºñÀ­¹ÌÁý\bewithme\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-4097337187.index
-1153985117.index
-3983436112.index
-3803552655.index
-2299261444.index
-1586784953.index
->>>>>>> d4a67c97f5c74eee05e86df67e7b38baa8d8186d
+4043456398.index
+1738983082.index
+2325436164.index
+682166926.index

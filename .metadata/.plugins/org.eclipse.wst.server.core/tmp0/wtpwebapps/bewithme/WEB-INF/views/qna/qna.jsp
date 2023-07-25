@@ -35,7 +35,7 @@
         <div class="mesgs">
           <div id="msg_history" class="msg_history">
             <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+              <div class="incoming_msg_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil">
               </div>
               <div class="received_msg">
                 <div class="received_withd_msg">
@@ -85,9 +85,6 @@
               <input type="text" id="write_msg" class="write_msg" placeholder="Type a message" onkeypress="enterkey(event)"/>
               <button id="msg_send_btn" class="msg_send_btn" type="button"><span class="material-symbols-outlined">
                 send
-                </span></button>
-              <button id="img_send_btn" class="img_send_btn" type="button"><span class="material-symbols-outlined">
-                add_a_photo
                 </span></button>
             </div>
           </div>

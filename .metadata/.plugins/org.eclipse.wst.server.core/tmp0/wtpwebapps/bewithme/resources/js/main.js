@@ -208,15 +208,15 @@ function schedulePrint() {
                             div += `<div class="schedule" data-calnum="${CalendarVO.cal_num}">`;
                             div += `<h4>${start_day}일</h4>`;
                             div += `<p><a href="${CalendarVO.url}" target="_blank">${CalendarVO.cal_content}</a></p>`;
-                            div += `<button class="schedule_modify">수정</button>`;
-                            div += `<button class="schedule_delete">삭제</button>`;
+                            div += `<button class="schedule_modify">✔수정</button>&nbsp&nbsp`;
+                            div += `<button class="schedule_delete">✂삭제</button>`;
                             div += `</div>`;
                         } else {
                             div += `<div class="schedule" data-calnum="${CalendarVO.cal_num}">`;
                             div += `<h4>${start_day}일 - ${end_day}일</h4>`;
                             div += `<p><a href="${CalendarVO.url}" target="_blank">${CalendarVO.cal_content}</a></p>`;
-                            div += `<button class="schedule_modify">수정</button>`;
-                            div += `<button class="schedule_delete">삭제</button>`;
+                            div += `<button class="schedule_modify">✔수정</button>&nbsp&nbsp`;
+                            div += `<button class="schedule_delete">✂삭제</button>`;
                             div += `</div>`;
                         }
                     } else { //사용자 일때
