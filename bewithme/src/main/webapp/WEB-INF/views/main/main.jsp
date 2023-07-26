@@ -18,7 +18,7 @@
             <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
                 <button><a href="/menu/home"> 🏠<span class="not"> Home</span></a></button><br>
-                <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
+                <button><a href="/sj/subject">📝<span class="not"> Subject</span></a></button><br>
                 <button><a href="/menu/community">📖<span> Community</span></a></button><br>
                 <c:choose>
                 	<c:when test="${ses.id eq 'admin'}">
@@ -36,7 +36,7 @@
         </div>
 
         <div class="center">
-            <h2>Hello, User1</h2>
+            <h2>Hello, ${ses.nickname}</h2>
             <p>Let's study with 'Be with Me'!</p>
             <div class="center-body">
 
@@ -209,7 +209,7 @@
                     </tbody>
                 </table>
             </div>
-            
+            <c:if test="${ses.id eq 'admin'}">     
              <div class="schedule-add">
                 <button id="scheduleAddBtn">
                     <span class="material-symbols-outlined">
@@ -217,6 +217,7 @@
                         </span>
                 </button>
             </div>
+            </c:if>
             <div id="schedule-container" class="schedule-container">
             <div class="schedule">
                 <h4>7월</h4>
@@ -235,16 +236,52 @@
 	<!-- 스케줄 추가 모달 -->
     <div class="modal-overlay">
         <div class="modal">
-            <h2>일정 추가</h2>
-            <label for="date">시작일:</label>
-            <input type="date" id="start_date" required><br><br>
-            <label for="date">종료일:</label>
-            <input type="date" id="end_date" required><br><br>
-            <label for="url">url:</label>
-            <input type="text" id="url" required><br><br>
-            <label for="description">내용:</label>
-            <textarea id="description" required></textarea><br><br>
-            <button id="scheduleRegisterBtn">일정 추가</button>
+			<h2 class="modal-heading1">일정 추가</h2> <!-- 일정 추가 텍스트 -->
+            <form>
+                <div class="input-group">
+                    <label for="start-date">시작일</label>
+                    <input type="date" id="start_date">
+                </div>
+                <hr>
+                <div class="input-group">
+                    <label for="end-date">종료일</label>
+                    <input type="date" id="end_date">
+                </div>
+                <hr>
+                <input type="url" id="url" placeholder="URL을 입력하세요"> <!-- URL 입력란 Placeholder 추가 -->
+                <hr>
+                <textarea id="description" rows="4" placeholder="내용을 입력하세요"></textarea> <!-- 내용 입력란 Placeholder 추가 -->
+                <!-- 일정 추가 버튼 -->
+                <div class="button-group1">
+                    <button id="scheduleRegisterBtn" type="button">일정 추가</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    	<!-- 스케줄 추가 모달 -->
+    <div class="modal-overlay-modify">
+        <div class="modal-modify">
+			<h2 class="modal-heading2">일정 수정</h2> <!-- 일정 추가 텍스트 -->
+            <form>
+                <div class="input-group">
+                    <label for="start-date">시작일</label>
+                    <input type="date" id="start_dateM">
+                </div>
+                <hr>
+                <div class="input-group">
+                    <label for="end-date">종료일</label>
+                    <input type="date" id="end_dateM">
+                </div>
+                <hr>
+                <input type="url" id="urlM" placeholder="URL을 입력하세요"> <!-- URL 입력란 Placeholder 추가 -->
+                <hr>
+                <textarea id="descriptionM" rows="4" placeholder="내용을 입력하세요"></textarea> <!-- 내용 입력란 Placeholder 추가 -->
+                <!-- 일정 추가 버튼 -->
+                <div class="button-group2">
+                    <button id="scheduleModifyBtn" type="button">일정 수정</button>
+                </div>
+            </form>
         </div>
     </div>
     
@@ -277,13 +314,14 @@
 	    </div>
   	</div>
 	
-	
+	<script type="text/javascript">
+	const id="${ses.id}";
+	const admin="${ses.admin}";
+	</script>
     <script src="/resources/js/main.js"></script>
     <script type="text/javascript">
     	schedulePrint();
     	todoPrint();
-    	const id="${ses.id}";
-    	const admin="${ses.admin}";
     </script>
 </body>
 </html>

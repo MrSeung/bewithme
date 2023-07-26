@@ -112,13 +112,15 @@ const calNum=document.getElementById('calNum');
 
 
 // 스케줄 등록 모달 출력
-openModalButton.addEventListener('click', function () {
-    modalOverlay.style.visibility = 'visible';
-    start_date.value = null;
-    end_date.value = null;
-    url.value = null;
-    description.value = null;
-});
+if(admin>0){
+    openModalButton.addEventListener('click', function () {
+        modalOverlay.style.visibility = 'visible';
+        start_date.value = null;
+        end_date.value = null;
+        url.value = null;
+        description.value = null;
+    });
+}
 
 modalOverlay.addEventListener('click', function (event) {
     if (event.target === modalOverlay) {
@@ -208,15 +210,15 @@ function schedulePrint() {
                             div += `<div class="schedule" data-calnum="${CalendarVO.cal_num}">`;
                             div += `<h4>${start_day}일</h4>`;
                             div += `<p><a href="${CalendarVO.url}" target="_blank">${CalendarVO.cal_content}</a></p>`;
-                            div += `<button class="schedule_modify">수정</button>`;
-                            div += `<button class="schedule_delete">삭제</button>`;
+                            div += `<button class="schedule_modify">✔수정</button>&nbsp&nbsp`;
+                            div += `<button class="schedule_delete">✂삭제</button>`;
                             div += `</div>`;
                         } else {
                             div += `<div class="schedule" data-calnum="${CalendarVO.cal_num}">`;
                             div += `<h4>${start_day}일 - ${end_day}일</h4>`;
                             div += `<p><a href="${CalendarVO.url}" target="_blank">${CalendarVO.cal_content}</a></p>`;
-                            div += `<button class="schedule_modify">수정</button>`;
-                            div += `<button class="schedule_delete">삭제</button>`;
+                            div += `<button class="schedule_modify">✔수정</button>&nbsp&nbsp`;
+                            div += `<button class="schedule_delete">✂삭제</button>`;
                             div += `</div>`;
                         }
                     } else { //사용자 일때
@@ -443,7 +445,7 @@ async function todoRegister(todoData) {
 //todo 목록 가져오기
 async function todoList() {
     try {
-        const url = "/todo/list";
+        const url = "/todo/list/"+id;
         const resp = await fetch(url);
         const result = await resp.json();
         return result;
