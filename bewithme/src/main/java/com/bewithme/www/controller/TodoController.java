@@ -40,9 +40,9 @@ public class TodoController {
 				: new ResponseEntity<String>("0", HttpStatus.INTERNAL_SERVER_ERROR);		
 	}
 	
-	@GetMapping(value="/list",produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<TodoVO>> getScheduleList(Model m){
-		List<TodoVO> list=todoService.getList();
+	@GetMapping(value="/list/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<TodoVO>> getScheduleList(Model m, @PathVariable("id")String id){
+		List<TodoVO> list=todoService.getList(id);
 		return new ResponseEntity<List<TodoVO>>(list,HttpStatus.OK);
 	}
 	

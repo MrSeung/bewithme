@@ -112,13 +112,15 @@ const calNum=document.getElementById('calNum');
 
 
 // 스케줄 등록 모달 출력
-openModalButton.addEventListener('click', function () {
-    modalOverlay.style.visibility = 'visible';
-    start_date.value = null;
-    end_date.value = null;
-    url.value = null;
-    description.value = null;
-});
+if(admin>0){
+    openModalButton.addEventListener('click', function () {
+        modalOverlay.style.visibility = 'visible';
+        start_date.value = null;
+        end_date.value = null;
+        url.value = null;
+        description.value = null;
+    });
+}
 
 modalOverlay.addEventListener('click', function (event) {
     if (event.target === modalOverlay) {
@@ -443,7 +445,7 @@ async function todoRegister(todoData) {
 //todo 목록 가져오기
 async function todoList() {
     try {
-        const url = "/todo/list";
+        const url = "/todo/list/"+id;
         const resp = await fetch(url);
         const result = await resp.json();
         return result;

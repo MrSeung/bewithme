@@ -36,7 +36,7 @@
         </div>
 
         <div class="center">
-            <h2>Hello, User1</h2>
+            <h2>Hello, ${ses.nickname}</h2>
             <p>Let's study with 'Be with Me'!</p>
             <div class="center-body">
 
@@ -314,13 +314,14 @@
 	    </div>
   	</div>
 	
-	
+	<script type="text/javascript">
+	const id="${ses.id}";
+	const admin="${ses.admin}";
+	</script>
     <script src="/resources/js/main.js"></script>
     <script type="text/javascript">
     	schedulePrint();
     	todoPrint();
-    	const id="${ses.id}";
-    	const admin="${ses.admin}";
     </script>
 </body>
 </html>
