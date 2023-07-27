@@ -3,6 +3,5 @@ INDEX VERSION 1.4+D:\_spring_workspace\bewithme_team\bewithme-중간점검\.metadata
 4022211048.index
 590945877.index
 1896837836.index
-2299261444.index
 879544741.index
 4097337187.index

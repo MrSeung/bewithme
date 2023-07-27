@@ -1,9 +1,0 @@
-package com.bewithme.www.repository;
-
-import com.bewithme.www.domain.Cou_CommentVO;
-
-public interface Cou_CommentDAO {
-
-	int register(Cou_CommentVO ccvo);
-
-}

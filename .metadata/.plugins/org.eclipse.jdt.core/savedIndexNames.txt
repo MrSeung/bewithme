@@ -3,7 +3,6 @@ INDEX VERSION 1.131+D:\_spring_workspace\bewithme_team\bewithme-중간점검\.metada
 2791995929.index
 3014939222.index
 572786757.index
-4011270791.index
 418617513.index
 4117436539.index
 609778822.index
