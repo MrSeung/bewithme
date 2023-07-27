@@ -85,9 +85,6 @@ function leftPad(value) {
     return value;
 }
 
-<<<<<<< HEAD
-
-
 //---------------------------------------------------------------------------------------
 //스케줄 등록 부분
 const openModalButton = document.getElementById('scheduleAddBtn');
@@ -460,5 +457,3 @@ document.getElementById('todoModalAddButton').addEventListener('click',()=>{
         });
     }
 });
-=======
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193

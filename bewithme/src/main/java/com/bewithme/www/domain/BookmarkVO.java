@@ -13,6 +13,7 @@ import lombok.ToString;
 @ToString
 public class BookmarkVO {
 
+
 	private int num;
 	private String id;
 	private int cou_num;

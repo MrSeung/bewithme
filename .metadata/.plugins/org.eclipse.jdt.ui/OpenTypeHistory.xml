@@ -1,14 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<<<<<<< HEAD
-    <typeInfo handle="=bewithme/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.service{CourseService.java[CourseService" modifiers="513" timestamp="1689742380171"/>
-    <typeInfo handle="=bewithme/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.service{SubjectService.java[SubjectService" modifiers="513" timestamp="1689729235695"/>
-    <typeInfo handle="=bewithme/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.service{Cou_CommentService.java[Cou_CommentService" modifiers="513" timestamp="1689817483364"/>
-=======
-    <typeInfo handle="=bewithme/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.service{UserService.java[UserService" modifiers="513" timestamp="1688697519591"/>
-    <typeInfo handle="=bewithme/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.service{CalendarService.java[CalendarService" modifiers="513" timestamp="1689039643646"/>
-    <typeInfo handle="=bewithme/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.service{TodoService.java[TodoService" modifiers="513" timestamp="1689138681803"/>
-    <typeInfo handle="=bewithme/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.service{ChatService.java[ChatService" modifiers="513" timestamp="1689647776706"/>
-    <typeInfo handle="=bewithme/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bewithme.www.service{ChatBotService.java[ChatBotService" modifiers="513" timestamp="1689746779188"/>
->>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
-</typeInfoHistroy>
+<typeInfoHistroy/>
