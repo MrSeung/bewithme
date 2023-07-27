@@ -1,5 +1,0 @@
-package com.bewithme.www.service;
-
-public interface Cou_CommentService {
-
-}
