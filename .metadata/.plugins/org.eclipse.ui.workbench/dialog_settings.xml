@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="EditorSelectionDialog">
+		<item key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION" value=".js"/>
+		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="true"/>
+		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="D:\VSCode-win32-x64-1.79.0\Code.exe"/>
+	</section>
 	<section name="NewWizardAction">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
 			<item value="org.eclipse.jst.ws.ui.new"/>
 			<item value="org.eclipse.wst.XMLCategory"/>
 			<item value="org.eclipse.ui.Examples"/>
-<<<<<<< HEAD
-=======
-=======
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
-		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.jdt.ui.java"/>
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
->>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 		</list>
-	</section>
-	<section name="EditorSelectionDialog">
-		<item key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION" value=".js"/>
-		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="true"/>
-<<<<<<< HEAD
-		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="D:\VSCode-win32-x64-1.79.0\Code.exe"/>
-=======
-<<<<<<< HEAD
-		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="C:\Users\EZENIC-175\Downloads\Code.exe"/>
-=======
-		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="C:\Users\EZENIC-174\Downloads\VSCode-win32-x64-1.77.0\Code.exe"/>
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
->>>>>>> c8c390bdb8bc1777844559db7184836c613d536d
 	</section>
 </section>

@@ -19,4 +19,5 @@ public class Cou_CommentVO {
 	private String cou_com_mod_date;
 	private String id;
 	private int cou_num;
+	private String cou_com_isMod;
 }

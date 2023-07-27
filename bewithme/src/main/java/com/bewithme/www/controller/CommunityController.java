@@ -1,23 +1,5 @@
 package com.bewithme.www.controller;
 
-<<<<<<< HEAD
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
-@RequestMapping("/community/*")
-@Controller
-public class CommunityController {
-	
-	@GetMapping("/community")
-	public String subject(){
-		return "/community/community";
-	}
-}
-=======
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -75,7 +57,7 @@ public class CommunityController {
 	}
 	
 	//community page로 이동
-	@GetMapping("/communitypage")
+	@GetMapping({"/community", "/communitypage"})
 	public String CommunityPage(){
 		return "/community/community";
 	}
@@ -154,14 +136,7 @@ public class CommunityController {
 		
 		return isOk > 0? new ResponseEntity<String>("1",HttpStatus.OK)
 				: new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
-	}
-	
-	
-	
-	
-	
-	
-	
+	}	
 	
 }
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+
