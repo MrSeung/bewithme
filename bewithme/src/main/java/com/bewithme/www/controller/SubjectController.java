@@ -45,6 +45,6 @@ public class SubjectController {
 		log.info("count : "+ count);
 		m.addAttribute("count",count);
     	
-    	return "subject/subject";
+    	return "/subject/subject";
     }
 }

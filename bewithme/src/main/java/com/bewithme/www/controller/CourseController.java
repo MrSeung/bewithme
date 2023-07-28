@@ -1,8 +1,12 @@
 package com.bewithme.www.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,8 +19,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.bewithme.www.domain.BookmarkVO;
 import com.bewithme.www.domain.CourseVO;
+import com.bewithme.www.domain.UserVO;
 import com.bewithme.www.service.CourseService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -32,17 +39,19 @@ public class CourseController {
 	
 	
 	@GetMapping("/write")
-	public String write(CourseVO cvo) {
+	public String write(CourseVO cvo, @RequestParam("sub_num") int sub_num, Model m) {
+		log.info("sub_num"+ sub_num);
+		m.addAttribute("sub_num", sub_num);
 		return "/subject/course_reg";
 	}
 	
 	@PostMapping("/write")
-	public String insertCourse(CourseVO cvo) {
-		log.info("cvo : "+ cvo);
-		csv.insertCourse(cvo);
-		
-			
-		return "/subject/subject";
+	public String insertCourse(CourseVO cvo, RedirectAttributes r) {
+		log.info("cvo : "+ cvo );
+		int isOk = csv.insertCourse(cvo);
+//		csv.insertCourse(cvo,cvo.getSub_num());
+		r.addAttribute("msg", isOk);
+		return "redirect:/sj/title?sub_num="+cvo.getSub_num();
 	}
 	
 	@GetMapping("/link")
@@ -84,5 +93,29 @@ public class CourseController {
 				: new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
 		
 	}
+	
+	//북마크 업데이트
+	@GetMapping(value="/updateBookmark/{cnoVal}", produces = {MediaType.TEXT_PLAIN_VALUE})
+	public ResponseEntity<String> updatebookmark(@PathVariable("cnoVal") int cou_num, HttpServletRequest request){
+		log.info(">>> cou_num : "+ cou_num);
+		HttpSession ses = request.getSession();
+		UserVO sesUser = (UserVO)ses.getAttribute("ses");  
+		
+		/*
+		 * Map<String, Object> listMap = new HashMap<String, Object>(); List<Integer>
+		 * bookList = csv.bookList(sesUser.getId()); listMap.put("bookList", bookList);
+		 * log.info(">>> bookList : "+bookList);
+		 */
+		
+		BookmarkVO bookvo = new BookmarkVO(0, sesUser.getId(),cou_num);
+		
+		int isOk = csv.updateBookmark(bookvo);
+		log.info(">>> isOk : " + isOk);
+		
+		return isOk > 0? new ResponseEntity<String>("1",HttpStatus.OK)
+				: new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
+		
+	}
+	
 	
 }
