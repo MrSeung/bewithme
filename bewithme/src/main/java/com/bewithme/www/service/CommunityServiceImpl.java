@@ -1,12 +1,18 @@
 package com.bewithme.www.service;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+import java.util.UUID;
 
 import javax.inject.Inject;
 
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.bewithme.www.domain.CommunityVO;
 import com.bewithme.www.domain.Community_LikeVO;
@@ -105,6 +111,31 @@ public class CommunityServiceImpl implements CommunityService{
 		//게시판 당 댓글 수 
 		log.info("community ServiceImpl selectCommentCnt in!");
 		return ccdao.selectCommentCnt(com_num);
+	}
+
+
+	@Override
+	public String SummerNoteImageFile(MultipartFile file) {
+		// TODO Auto-generated method stub
+		String url="";
+		String fileRoot = "C:\\summernoteImg\\";
+		String originalFileName = file.getOriginalFilename();
+		String extension = originalFileName.substring(originalFileName.lastIndexOf("."));
+		
+		String saveFileName = UUID.randomUUID()+extension;
+			
+		File targetFile = new File(fileRoot+saveFileName);
+		
+		try {
+			InputStream fileStream = file.getInputStream();
+			FileUtils.copyInputStreamToFile(fileStream, targetFile);
+			url="/summernoteImg/"+saveFileName;
+			log.info("url  : "+url);
+		} catch(IOException e) {
+			FileUtils.deleteQuietly(targetFile);
+			e.printStackTrace();
+		}	
+		return url;
 	}
 
 

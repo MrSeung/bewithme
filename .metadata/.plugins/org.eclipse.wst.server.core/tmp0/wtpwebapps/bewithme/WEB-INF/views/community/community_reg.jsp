@@ -15,22 +15,7 @@
 <!-- include summernote-ko-KR -->
 <script src="/resources/js/summernote-ko-KR.js"></script>
 <link href="/resources/css/register.css" rel="stylesheet">
-<script>
-$(document).ready(function() {
-	
-	var setting = {
-			placeholder: 'content',
-	        height: 450,  
-	        minHeight: 370,
-	        maxHeight: 500,
-	        focus: true, 
-	        lang : 'ko-KR'
-	};
-	
-    $('#summernote').summernote(setting);
-     
-   });
-</script>
+
 <title>register</title>
 </head>
 <body>
@@ -111,10 +96,12 @@ $(document).ready(function() {
 	                <input id="subBtn" type="button" value="저장" class="wbutton"
 	                     onclick="goWrite(this.form)"/>
 	            </div>
-	               <!-- 썸머노트 들어갈 곳 -->
 	            <div style=" margin: auto;" class="summer">
+	            <form method="post" enctype="multipart/form-data">
 	                     <textarea id="summernote"></textarea>
-	            </div>
+	                      </form>
+	            </div>	            
+	               <!-- 썸머노트 들어갈 곳 -->
            	</div>
       	</div>
        
@@ -131,6 +118,51 @@ $(document).ready(function() {
 	     
 	     document.getElementById("com_reg_date").value = com_reg_date;
      </script>
+     <script>
+$(document).ready(function() {
+	
+	var setting = {
+			placeholder: 'content',
+	        height: 450,  
+	        minHeight: 370,
+	        maxHeight: 500,
+	        focus: true, 
+	        lang : 'ko-KR',
+	  		callbacks: {
+					onImageUpload : function(files){	
+						sendFile(files[0],this);
+					}
+				}
+	};
+	
+    $('#summernote').summernote(setting);
+     
+   });
+   
+function sendFile(file, editor){
+	var data = new FormData();
+	data.append("file", file);
+	console.log("file : "+file);
+	console.log("data : "+data);
+	$.ajax({
+		data : data,
+		type : "POST",
+		url : "/community/SummerNoteImageFile",
+		contentType : false,
+		processData : false,
+		enctype : 'multipart/form-data',
+		error : function() {
+			console.log("파일 에러!!");
+		},
+		success : function(url){
+			console.log(url);
+			console.log(editor);
+			$(editor).summernote("insertImage",url);
+		}
+	});
+}
+
+</script>
      
 </body>
 </html>

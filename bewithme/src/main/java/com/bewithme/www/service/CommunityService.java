@@ -3,6 +3,7 @@ package com.bewithme.www.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.bewithme.www.domain.CommunityVO;
 import com.bewithme.www.domain.Community_LikeVO;
@@ -26,6 +27,8 @@ public interface CommunityService {
 	int selectCommentCnt(int com_num);
 
 	List<Integer> getLikeCommentCnt(String id);
+
+	String SummerNoteImageFile(MultipartFile file);
 
 
 

@@ -6,7 +6,7 @@ public class Com_FileVO { //커뮤니티 게시글 파일
 	private String com_file_save_dir;
 	private String com_file_name;
 	private int com_file_type;
-	private int com_file_size;
+	private long com_file_size;
 	private String com_file_reg_date;
 	private int com_num; //community연결
 	
@@ -35,11 +35,11 @@ public class Com_FileVO { //커뮤니티 게시글 파일
 	public void setCom_file_type(int com_file_type) {
 		this.com_file_type = com_file_type;
 	}
-	public int getCom_file_size() {
+	public long getCom_file_size() {
 		return com_file_size;
 	}
-	public void setCom_file_size(int com_file_size) {
-		this.com_file_size = com_file_size;
+	public void setCom_file_size(long l) {
+		this.com_file_size = l;
 	}
 	public String getCom_file_reg_date() {
 		return com_file_reg_date;
