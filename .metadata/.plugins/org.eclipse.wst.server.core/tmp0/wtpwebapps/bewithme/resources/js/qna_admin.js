@@ -28,7 +28,7 @@ function printChatUserList() {
         }
         div += `<div id="chat_list" class="chat_list" data-fromid="${userList.from_id}">
         <div class="chat_people" data-fromid="${userList.from_id}">
-          <div class="chat_img" data-fromid="${userList.from_id}"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+          <div class="chat_img" data-fromid="${userList.from_id}"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil"> </div>
           <div class="chat_ib" data-fromid="${userList.from_id}">
             <h5 class="chat_h">${userList.from_id}<span class="chat_date">${month}월 ${day}일</span></h5>
             <p>${userList.chat_content}</p>
@@ -183,7 +183,7 @@ function getMsgList(userId) {
   printMsgList(userId).then(result => {
     const msg_history = document.getElementById('msg_history');
     msg_history.innerHTML = `<div class="incoming_msg">
-    <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+    <div class="incoming_msg_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil">
     </div>
     <div class="received_msg">
       <div class="received_withd_msg">
@@ -197,7 +197,7 @@ function getMsgList(userId) {
       for (let ChatVO of result) {
         if (ChatVO.from_id == 'admin') {
           div += `<div class="incoming_msg">
-        <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+        <div class="incoming_msg_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil">
         </div>
         <div class="received_msg">
           <div class="received_withd_msg">
@@ -287,7 +287,7 @@ function printChatBotList() {
         </div>
         <div class="chat_bot_btn" data-content="${chatBot.bot_content}" data-btncontent="${chatBot.btn_content}">
           <button class="bot_btn" id="chat_bot_btn">${chatBot.btn_content}</button>
-        </div>
+          </div>
       </div>`
       }
     }
@@ -321,6 +321,7 @@ document.getElementById('chatBotRegisterBtn').addEventListener('click', () => {
       if (result > 0) {
         alert("챗봇 내용 추가 완료!");
         printChatBotList();
+        modalOverlay.style.visibility = 'hidden';
       } else {
         alert("챗봇 내용 추가 실패ㅠ");
         printChatBotList();

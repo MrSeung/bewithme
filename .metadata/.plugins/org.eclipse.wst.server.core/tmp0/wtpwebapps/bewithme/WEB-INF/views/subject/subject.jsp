@@ -17,11 +17,23 @@
             <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
 
+<<<<<<< HEAD
                 <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
                 <button><a href="/sj/subject">📝<span class="not"> Subject</span></a></button><br>
                 <!-- <button><a href="/menu/subject">📝<span class="not"> Subject</span></a></button><br> -->
                 <button><a href="/menu/community">📖<span> Community</span></a></button><br>
                 <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
+=======
+
+
+
+                <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
+                <button><a href="/sj/subject">📝<span class="not"> Subject</span></a></button><br>
+               <!-- <button><a href="/menu/subject">📝<span class="not"> Subject</span></a></button><br>  -->
+                <button><a href="/menu/community">📖<span> Community</span></a></button><br>
+                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
+
+>>>>>>> 26853861466dbeebda7f78731516de9907816124
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>

@@ -8,7 +8,7 @@ public interface TodoService {
 
 	int insertTodo(TodoVO todo);
 
-	List<TodoVO> getList();
+	List<TodoVO> getList(String id);
 
 	int deleteTodo(int todo_num);
 
