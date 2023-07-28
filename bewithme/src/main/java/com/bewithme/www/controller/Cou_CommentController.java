@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +23,7 @@ import com.bewithme.www.service.Cou_CommentService;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+
 @RequestMapping("/cou_comment/*")
 @Controller
 public class Cou_CommentController {
@@ -29,12 +31,14 @@ public class Cou_CommentController {
 	@Inject
 	private Cou_CommentService ccsv;
 	
+	private static final Logger log = LoggerFactory.getLogger(Cou_CommentController.class);
+	
 	@PostMapping(value = "/post", consumes = "application/json",
 			produces = {MediaType.TEXT_PLAIN_VALUE} )
 	public ResponseEntity<String> post(@RequestBody Cou_CommentVO ccvo){
 		log.info(">>> ccvo : "+ ccvo);
 		//id 임시연결
-		//ccvo.setId("123");
+		ccvo.setId("123");
 		//DB연결
 		int isOk = ccsv.register(ccvo);
 		return isOk > 0 ? new ResponseEntity<String>("1",HttpStatus.OK) : new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
@@ -53,7 +57,7 @@ public class Cou_CommentController {
 	public ResponseEntity<String> edit(@RequestBody Cou_CommentVO ccvo){
 		log.info(">>> edit ccvo : "+ccvo);
 		//id 임시연결
-		//ccvo.setId("123");
+		ccvo.setId("123");
 		//DB연결
 		int isOk = ccsv.edit(ccvo);
 		return isOk > 0 ? new ResponseEntity<String>("1",HttpStatus.OK) : new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);

@@ -27,6 +27,8 @@ public interface CommunityService {
 
 	List<Integer> getLikeCommentCnt(String id);
 
+	List<CommunityVO> selectComunnitySearchList(String searchKeyword);
+
 
 
 }

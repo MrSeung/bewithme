@@ -4,6 +4,8 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +26,8 @@ import lombok.extern.slf4j.Slf4j;
 public class UserController {
 	@Inject
 	private UserService userService;
+	
+	private static final Logger log = LoggerFactory.getLogger(UserController.class);
 	
 	@PostMapping(value="/signup",consumes = "application/json", produces = MediaType.TEXT_PLAIN_VALUE)
 	public ResponseEntity<String> signupPost(Model m, @RequestBody UserVO user) {

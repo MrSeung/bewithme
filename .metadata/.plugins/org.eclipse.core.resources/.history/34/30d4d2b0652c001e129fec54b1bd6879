@@ -1,0 +1,13 @@
+package com.bewithme.www.service;
+
+import java.util.List;
+
+import com.bewithme.www.controller.CourseVO;
+
+public interface BookmarkService {
+
+	List<Integer> getBookMarkNum(String id);
+
+	List<CourseVO> selectCourseList();
+
+}

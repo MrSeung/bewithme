@@ -2,7 +2,6 @@ package com.bewithme.www.repository;
 
 import java.util.List;
 
-import com.bewithme.www.domain.BookmarkVO;
 import com.bewithme.www.domain.CourseVO;
 
 public interface CourseDAO {
@@ -19,8 +18,7 @@ public interface CourseDAO {
 
 	int cou_cnt(int cou_num);
 
-	int isBook(BookmarkVO bookvo);
-
+	List<CourseVO> selectAllList();
 
 
 

@@ -24,9 +24,9 @@ public class TodoServiceImpl implements TodoService {
 	}
 
 	@Override
-	public List<TodoVO> getList(String id) {
+	public List<TodoVO> getList() {
 		// TODO Auto-generated method stub
-		List<TodoVO>list=todoDAO.getList(id);
+		List<TodoVO>list=todoDAO.getList();
 		return list;
 	}
 

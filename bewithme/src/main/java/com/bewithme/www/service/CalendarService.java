@@ -10,10 +10,4 @@ public interface CalendarService {
 
 	List<CalendarVO> getList();
 
-	CalendarVO getSchedule(int cal_num);
-
-	int updateSchedule(CalendarVO cal);
-
-	int removeSchedule(int cal_num);
-
 }

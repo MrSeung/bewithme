@@ -10,10 +10,4 @@ public interface CalendarDAO {
 
 	List<CalendarVO> getList();
 
-	CalendarVO getSchedule(int cal_num);
-
-	int updateSchedule(CalendarVO cal);
-
-	int deleteSchedule(int cal_num);
-
 }

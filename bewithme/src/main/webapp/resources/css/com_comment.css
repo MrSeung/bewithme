@@ -128,7 +128,7 @@ body{
 }
 
 /* 전체, 기술, 상담, MY 선택버튼 */
-.nav>button{
+.navBtns>button{
     width: 70px;
     height: 40px;
 
@@ -145,16 +145,13 @@ body{
     margin: 50px 15px 10px 0;
     font-weight: 700;
 }
+ 
 
-.nav>button:first-child{
-    background-image : linear-gradient(to bottom right, #6C72CD, #CB68C3), linear-gradient(to bottom right, #6C72CD, #CB68C3);
-}
-
-.nav>button:hover{
+.navBtns>button:hover{
    cursor: pointer;
 }
 
-/* 질문쓰기 */
+/* 질문쓰기 */ 
 .question>button{
     width: 90px;
     height: 40px;
@@ -267,7 +264,6 @@ body{
     background-color: inherit;
     border-radius: 15px;
     
-
     color: white;
     font-size: 15px;
     padding: 10px;
@@ -318,10 +314,6 @@ body{
     /* 댓글 전체 */
     margin-top: 40px;
     width: 100%;
-<<<<<<< HEAD
-    height: 500px;
-=======
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
 }
 
 .comment_content{
@@ -335,12 +327,6 @@ body{
     color: #A4A4A4;
 }
 
-<<<<<<< HEAD
-#modBtn,#delBtn {
-	/* 댓글 닉네임, 수정/삭제버튼 */
-	color: #A4A4A4;   
-	font-size: 15px;
-=======
 .comment_content>div>.nickname{
 	/* 댓글 유저 닉네임 */
 	color: #FFAC4D;   
@@ -351,41 +337,22 @@ body{
 	/* 댓글 수정/삭제버튼 */
 	color: #A4A4A4;   
 	font-size: 13px;
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
     border: none;
     background-color: inherit;
     margin-left: 2px; 
     font-family: "AppleSDGothicNeoR"; 
 }  
 
-<<<<<<< HEAD
-#modBtn{ 
-	margin-left: 10px; 
-}
-
-#modBtn:hover,#delBtn:hover{
-=======
 .modBtn{ 
 	margin-left: 10px; 
 	margin-right: 5px;
 }
 
 .modBtn:hover,.delBtn:hover{
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
     cursor: pointer;
     color: white; 
 }
 
-<<<<<<< HEAD
-.comment_content>div:nth-child(2)>input{
-    /* 댓글 내용 */
-    color: white;
-    margin: 20px 0;
-    width: 80%;
-}
-
-.comment_content>div:nth-child(3){
-=======
 #cmtTextMod{
     /* 댓글 내용 */  
     color: white;
@@ -406,7 +373,6 @@ body{
 
 
 .comment_content>div:nth-of-type(2){ 
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
     /* 댓글 날짜, 좋아요 등 */
     display: flex;
     justify-content: space-between;
@@ -414,11 +380,7 @@ body{
     margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
-.comment_content>div:nth-child(3)>button{
-=======
 .like_button{ 
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
     color: white;
     border: none;
     background-color: inherit;
@@ -427,26 +389,33 @@ body{
 .like_button:hover{
     /* 댓글 좋아요버튼 (하트) */
     cursor: pointer;
-<<<<<<< HEAD
-=======
     color: #FFAC4D; 
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
 }
 
 .comment_line{
     /* 구분선 */
     border-bottom: 1px solid #808080;
-<<<<<<< HEAD
-    margin-bottom: 35px;
-=======
     margin-bottom: 15px;
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
 }
+
+/* 댓글 페이징 */
+.paging{
+	display: flex;
+	justify-content: center;
+}
+.paging>a{
+	color: white;
+	text-decoration: none;
+} 
+.paging>a:hover{
+	color: #FFAC4D; 
+}
+
 
 /* 올라가는 버튼 */
 .up{
     position: fixed;
-    bottom: 5%;
+    bottom: 5%; 
     right: 4%;
 }
 .up span{

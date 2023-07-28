@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -22,13 +24,15 @@ import com.bewithme.www.service.ChatService;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+
 @RequestMapping("/chat/*")
 @Controller
 public class ChatController {
 	
 	@Inject
 	private ChatService chatService;
+	
+	private static final Logger log = LoggerFactory.getLogger(ChatController.class);
 	
 	@PostMapping(value="/register",consumes = "application/json", produces = MediaType.TEXT_PLAIN_VALUE )
 	private ResponseEntity<String> registerMsg(Model m, @RequestBody ChatVO chat){

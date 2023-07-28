@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.bewithme.www.domain.Cou_CommentVO;
@@ -18,6 +20,8 @@ public class Cou_CommentServiceImpl implements Cou_CommentService {
 	@Inject
 	private Cou_CommentDAO ccdao;
 
+	private static final Logger log = LoggerFactory.getLogger(Cou_CommentServiceImpl.class);
+	
 	@Override
 	public int register(Cou_CommentVO ccvo) {
 		log.info("cou댓글 insert서비스 진입!");

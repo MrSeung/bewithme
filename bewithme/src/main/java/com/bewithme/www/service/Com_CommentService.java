@@ -2,6 +2,7 @@ package com.bewithme.www.service;
 
 import java.util.List;
 
+import com.bewithme.www.domain.Com_CommentPagingVO;
 import com.bewithme.www.domain.Com_CommentVO;
 import com.bewithme.www.domain.Com_Comment_LikeVO;
 
@@ -18,4 +19,6 @@ public interface Com_CommentService {
 	int updateCom_CommentLike(Com_Comment_LikeVO cclvo);
 
 	List<Integer> getLikeCom_CommentCnt(String id);
+
+	int getTotalCmtCnt(Com_CommentPagingVO pgvo);
 }

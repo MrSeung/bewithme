@@ -108,6 +108,14 @@ public class CommunityServiceImpl implements CommunityService{
 	}
 
 
+	@Override
+	public List<CommunityVO> selectComunnitySearchList(String searchKeyword) {
+		// 검색된 게시글 리스트 출력
+		log.info("community ServiceImpl selectComunnitySearchList in!");
+		return cdao.selectSearchList(searchKeyword);
+	}
+
+
 	
 	
 	

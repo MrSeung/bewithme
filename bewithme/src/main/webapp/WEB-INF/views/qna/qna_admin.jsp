@@ -38,12 +38,18 @@
             <div class="recent_heading">
               <h4>Recent</h4>
             </div>
-
+            <div class="srch_bar">
+              <div class="stylish-input-group">
+                <input type="text" class="search-bar" placeholder="Search">
+                <span class="input-group-addon">
+                  <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                </span> </div>
+            </div>
           </div>
           <div class="inbox_chat" id="inbox_chat">
             <div class="chat_list active_chat">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
                   <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
                   <p>Test, which is a new approach to have all solutions
@@ -53,7 +59,7 @@
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
                   <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
                   <p>Test, which is a new approach to have all solutions
@@ -63,7 +69,7 @@
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
                   <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
                   <p>Test, which is a new approach to have all solutions
@@ -73,7 +79,7 @@
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
                   <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
                   <p>Test, which is a new approach to have all solutions
@@ -83,7 +89,7 @@
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
                   <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
                   <p>Test, which is a new approach to have all solutions
@@ -93,7 +99,7 @@
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
                   <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
                   <p>Test, which is a new approach to have all solutions
@@ -103,7 +109,7 @@
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
                   <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
                   <p>Test, which is a new approach to have all solutions
@@ -117,7 +123,7 @@
         <div class="mesgs">
           <div id="msg_history" class="msg_history">
             <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil">
+              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
               </div>
               <div class="received_msg">
                 <div class="received_withd_msg">
@@ -135,7 +141,7 @@
               </div>
             </div>
             <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil">
+              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
               </div>
               <div class="received_msg">
                 <div class="received_withd_msg">
@@ -151,7 +157,7 @@
               </div>
             </div>
             <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil">
+              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
               </div>
               <div class="received_msg">
                 <div class="received_withd_msg">
@@ -169,35 +175,28 @@
               <button id="msg_send_btn" class="msg_send_btn" type="button"><span class="material-symbols-outlined">
                 send
                 </span></button>
+              <button id="img_send_btn" class="img_send_btn" type="button"><span class="material-symbols-outlined">
+                add_a_photo
+                </span></button>
             </div>
           </div>
         </div>
       </div>
       
       <div id="chatBotContainer" class="bottom">
-        <!-- 챗봇 박스들 출력되는 부분 -->
+        
       </div>
       
            <div class="modal-overlay">
         <div class="modal">
-            <h2 class="modal-heading">채봇 추가</h2> <!-- 일정 추가 텍스트 -->
-            <form>
-                <div class="input-group">
-                    <label for="title">제목 : </label>
-                    <input type="text" id="chat_title">
-                </div>
-                <hr>
-                <div class="input-group">
-                    <label for="chat_btn">버튼 : </label>
-                    <input type="text" id="chat_btn">
-                </div>
-                <hr>          
-                <textarea id="chat_content" rows="4" placeholder="내용을 입력하세요"></textarea> <!-- 내용 입력란 Placeholder 추가 -->
-                <!-- 일정 추가 버튼 -->
-                <div class="button-group">
-                    <button id="chatBotRegisterBtn" type="button">챗봇 추가</button>
-                </div>
-            </form>
+            <h2>챗봇 추가</h2>
+            <label for="title">제목:</label>
+            <input type="text" id="chat_title" required><br><br>
+            <label for="content">내용:</label>
+            <textarea id="chat_content" required></textarea><br><br>
+            <label for="btn">버튼:</label>
+            <input type="text" id="chat_btn" required><br><br>
+            <button id="chatBotRegisterBtn">챗봇 추가</button>
         </div>
     </div>
 

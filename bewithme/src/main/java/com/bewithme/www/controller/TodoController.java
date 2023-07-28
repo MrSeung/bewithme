@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +33,8 @@ public class TodoController {
 	@Inject
 	private TodoService todoService;
 	
+	private static final Logger log = LoggerFactory.getLogger(TodoController.class);
+	
 	
 	@PostMapping(value="/register",consumes = "application/json", produces = MediaType.TEXT_PLAIN_VALUE)
 	public ResponseEntity<String> registerTodo(Model m, @RequestBody TodoVO todo) {
@@ -40,9 +44,9 @@ public class TodoController {
 				: new ResponseEntity<String>("0", HttpStatus.INTERNAL_SERVER_ERROR);		
 	}
 	
-	@GetMapping(value="/list/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<TodoVO>> getScheduleList(Model m, @PathVariable("id")String id){
-		List<TodoVO> list=todoService.getList(id);
+	@GetMapping(value="/list",produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<TodoVO>> getScheduleList(Model m){
+		List<TodoVO> list=todoService.getList();
 		return new ResponseEntity<List<TodoVO>>(list,HttpStatus.OK);
 	}
 	

@@ -124,7 +124,7 @@ function getMsgList(userId) {
   printMsgList(userId).then(result => {
     const msg_history = document.getElementById('msg_history');
     msg_history.innerHTML = `<div class="incoming_msg">
-    <div class="incoming_msg_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil">
+    <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
     </div>
     <div class="received_msg">
       <div class="received_withd_msg">
@@ -138,7 +138,7 @@ function getMsgList(userId) {
       for (let ChatVO of result) {
         if (ChatVO.from_id == 'admin') {
           div += `<div class="incoming_msg">
-        <div class="incoming_msg_img"> <img src="https://cdn-icons-png.flaticon.com/256/8955/8955051.png" alt="sunil">
+        <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
         </div>
         <div class="received_msg">
           <div class="received_withd_msg">

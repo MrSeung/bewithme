@@ -14,7 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
 <!-- include summernote-ko-KR -->
 <script src="/resources/js/summernote-ko-KR.js"></script>
-<link href="/resources/css/register.css" rel="stylesheet">
+<link href="/resources/css/com_register.css" rel="stylesheet">
 <script>
 $(document).ready(function() {
 	
@@ -76,8 +76,8 @@ $(document).ready(function() {
                
                <div>
                   <p>닉네임</p>
-                  <input type="text" id="nickname" value="임의 닉네임" >
-                  <input type="hidden" id="id" value="1111">
+                  <input type="text" id="nickname" value="${ses.nickname}" readonly="readonly" >
+                  <input type="hidden" id="id" value="${ses.id}">
                </div>
                
                <div>

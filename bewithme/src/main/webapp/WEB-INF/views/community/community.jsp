@@ -7,10 +7,8 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/css/community.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.4.5/swiper.scss">
-=======
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+
 <title>community</title>
 </head>
 <body>
@@ -20,17 +18,13 @@
         <div class="left">
             <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
-<<<<<<< HEAD
+
                 <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
                 <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
-                <button><a href="/menu/community">📖<span class="not"> Community</span></a></button><br>
-                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
-=======
-                <button da><a href=""> 🏠<span> Home</span></a></button><br>
-                <button><a href="">📝<span> Subject</span></a></button><br>
                 <button><a href="/community/communitypage">📖<span class="not"> Community</span></a></button><br>
-                <button><a href="">📁<span> Q&A</span></a></button><br>
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
+              
+
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
@@ -54,7 +48,7 @@
 	            </a>
            </div>
             <div class="nav_line"></div>
-   
+  
             <!-- 스크롤/ 게시판 리스트 -->
             <div class="main">
 
@@ -85,14 +79,13 @@
             
 
                 <div class="sort_bar">
-                    <div class="sort">
-                        <button> 최신순 </button>
-                        <button> 인기순 </button> 
+                    <div class="sort"  id="sort">
+						<!-- 최신순/인기순버튼 또는 검색결과 출력부분 -->
                     </div>
 
                     <div class="search">
                         <img src="/resources/img/q.png">
-                        <input type="text" name="keyword"  placeholder="키워드로 검색" value="${ph.sh.keyword}">
+                        <input type="text" id="search"  placeholder="키워드로 검색">
                     </div>
                 </div>
                 <div class="main_line"></div>
@@ -106,9 +99,10 @@
 
 <script type="text/javascript" src="../resources/js/community.js"></script>
 <script type="text/javascript">
-	const id = '<c:out value="1111" />'
+	const sesId = '<c:out value="${ses.id}" />'
 	getRecommendList("전체");
 	getCommunityList(0,"전체");
+
 </script>
 
 </body>

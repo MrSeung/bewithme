@@ -9,14 +9,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.bewithme.www.domain.CalendarVO;
 import com.bewithme.www.domain.UserVO;
@@ -43,25 +39,5 @@ public class CalendarController {
 	public ResponseEntity<List<CalendarVO>> getScheduleList(Model m){
 		List<CalendarVO> list=calService.getList();
 		return new ResponseEntity<List<CalendarVO>>(list,HttpStatus.OK);
-	}
-	
-	@GetMapping(value="/get/{cal_num}", produces = MediaType.APPLICATION_JSON_VALUE)
-	private ResponseEntity<CalendarVO> getSchedule(@PathVariable("cal_num")int cal_num){
-		CalendarVO cal=calService.getSchedule(cal_num);
-		return new ResponseEntity<CalendarVO>(cal,HttpStatus.OK);
-	}
-	
-	@PutMapping(value = "/update",consumes = "application/json",  produces = MediaType.TEXT_PLAIN_VALUE)
-	private ResponseEntity<String> updateSchedule(@RequestBody CalendarVO cal){
-		int isOk=calService.updateSchedule(cal);
-		return isOk> 0? new ResponseEntity<String>("1", HttpStatus.OK)
-				: new ResponseEntity<String>("0", HttpStatus.INTERNAL_SERVER_ERROR);	
-	}
-	
-	@DeleteMapping(value = "/remove/{cal_num}", produces = MediaType.TEXT_PLAIN_VALUE )
-	private ResponseEntity<String> removeSchedule(@PathVariable("cal_num")int cal_num){
-		int isOk=calService.removeSchedule(cal_num);
-		return isOk> 0? new ResponseEntity<String>("1", HttpStatus.OK)
-				: new ResponseEntity<String>("0", HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 }

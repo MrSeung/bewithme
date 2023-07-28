@@ -1,0 +1,12 @@
+package com.bewithme.www.service;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BookmarkServiceImpl implements BookmarkService{
+
+	@Inject
+	private BookmarkDAO bdao;
+}

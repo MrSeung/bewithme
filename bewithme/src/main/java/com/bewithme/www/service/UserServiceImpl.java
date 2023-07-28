@@ -2,6 +2,8 @@ package com.bewithme.www.service;
 
 import javax.inject.Inject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,8 @@ public class UserServiceImpl implements UserService {
 	private UserDAO udao;
 	@Inject
 	BCryptPasswordEncoder passwordencoder;
+	
+	private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
 	@Override
 	public int signup(UserVO user) {

@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import com.bewithme.www.domain.Com_CommentPagingVO;
 import com.bewithme.www.domain.Com_CommentVO;
 import com.bewithme.www.domain.Com_Comment_LikeVO;
 import com.bewithme.www.domain.Community_LikeVO;
@@ -74,7 +75,7 @@ public class Com_CommentServiceImpl implements Com_CommentService{
 			//해당 댓글을 좋아요한 데이터 전체 삭제 (좋아요테이블에서 id 관련없이 해당 댓글의 좋아요 삭제)
 			int isLikeOk = ccldao.deleteAllCommentLike(com_com_num);
 			log.info(">>> isLikeOK (삭제된 좋아요 데이터) " + isLikeOk);
-			//해당 게시글의 댓글 갯수 
+			//해당 게시글의 댓글 갯수 -1
 			isOk *= cdao.updateCom_comment_cntDown(com_num);
 		}
 		return isOk;
@@ -101,6 +102,13 @@ public class Com_CommentServiceImpl implements Com_CommentService{
 			int com_com_like_cnt = ccldao.selectLikeCnt(com_com_num);
 			return ccdao.updateLike(com_com_num, com_com_like_cnt);
 		}
+	}
+
+	@Override
+	public int getTotalCmtCnt(Com_CommentPagingVO pgvo) {
+		// 해당 게시글의 댓글 총 개수 구하기
+		log.info("com_comment ServiceImpl getTotalCmtCnt in!");
+		return ccdao.selectCommentCnt(pgvo.getCommentNo());
 	}
 
 	
