@@ -6,7 +6,9 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
+import com.bewithme.www.domain.BookmarkVO;
 import com.bewithme.www.domain.CourseVO;
+import com.bewithme.www.repository.BookmarkDAO;
 import com.bewithme.www.repository.CourseDAO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -17,6 +19,8 @@ public class CourseServiceImpl implements CourseService {
 	
 	@Inject
 	private CourseDAO cdao;
+	@Inject
+	private BookmarkDAO bdao;
 
 	@Override
 	public int insertCourse(CourseVO cvo) {
@@ -47,6 +51,29 @@ public class CourseServiceImpl implements CourseService {
 		log.info("조회수 Service진입~!!");
 		return cdao.cou_cnt(cou_num);
 	}
+
+	@Override
+	public int updateBookmark(BookmarkVO bookvo) {
+		log.info("북마크 Service진입~!!");
+		
+		//bookmark id와 cou_num이 일치하는지 확인
+		int isBook = bdao.isBook(bookvo);
+		if(isBook > 0) {
+			return bdao.delete(bookvo);
+		}else {
+			return bdao.insert(bookvo);
+		}
+	}
+
+	@Override
+	public List<Integer> bookList(String id) {
+		log.info("북마크list Service진입~!!");
+		return bdao.bookList(id);
+	}
+
+
+
+
 
 
 

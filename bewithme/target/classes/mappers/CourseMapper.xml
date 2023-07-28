@@ -6,8 +6,8 @@
 
 	<!-- 게시판 insert -->
 	<insert id="insertCourse" parameterType="com.bewithme.www.domain.CourseVO">
-		insert into course (cou_title, id, cou_content, sub_num)
-		values (#{cou_title}, #{id}, #{cou_content}, #{sub_num})
+		insert into course (cou_title, cou_content,sub_num,id)
+		values (#{cou_title},#{cou_content},#{sub_num},#{id})
 	</insert>
 
 	<select id="getList" resultType="com.bewithme.www.domain.CourseVO">
@@ -29,4 +29,8 @@
 	<update id="cou_cnt">
 		update course set cou_cnt = cou_cnt+1 where cou_num=#{cou_num}
 	</update>
+	
+
+	
+	
 </mapper>

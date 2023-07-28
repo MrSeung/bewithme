@@ -17,6 +17,13 @@
             <img src="/resources/img/logo.png" class="logo" alt="">
             <div class="menu_bar">
 
+<<<<<<< HEAD
+                <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
+                <button><a href="/sj/subject">📝<span class="not"> Subject</span></a></button><br>
+                <!-- <button><a href="/menu/subject">📝<span class="not"> Subject</span></a></button><br> -->
+                <button><a href="/menu/community">📖<span> Community</span></a></button><br>
+                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
+=======
 
 
 
@@ -26,6 +33,7 @@
                 <button><a href="/menu/community">📖<span> Community</span></a></button><br>
                 <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
 
+>>>>>>> 26853861466dbeebda7f78731516de9907816124
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
@@ -33,7 +41,7 @@
             </div>
         
         </div>
-        <form action="/sj/title?sub_num=${svo.sub_num} }" method="get">
+        <form action="/sj/title?sub_num=${svo.sub_num}" method="get">
         <div class="right">
             <div class="tt">
                 <button class="sj_t">배우기</button>
@@ -52,7 +60,7 @@
                   <!-- </svg>&nbsp;&nbsp;업로드 날짜</p> -->
                   </svg>&nbsp;&nbsp;${svo.sub_reg_date }</p>
                   <!-- 관리자로 로그인 될때만 뜨도록 -->
-                  <button class="sj_reg"><a href="/co/write" class="sj_a">등록하기</a></button>
+                  <button class="sj_reg"><a href="/co/write?sub_num=${svo.sub_num}" class="sj_a">등록하기</a></button>
             </div>
             </form>
             <hr>
