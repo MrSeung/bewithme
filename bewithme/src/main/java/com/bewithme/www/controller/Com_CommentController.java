@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,8 +23,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bewithme.www.domain.Com_CommentPagingVO;
 import com.bewithme.www.domain.Com_CommentVO;
 import com.bewithme.www.domain.Com_Comment_LikeVO;
+import com.bewithme.www.domain.UserVO;
+import com.bewithme.www.handler.Com_CommentPagingHandler;
 import com.bewithme.www.service.Com_CommentService;
 
 @Controller
@@ -38,10 +42,7 @@ public class Com_CommentController {
 	//댓글 저장
 	@PostMapping(value="/insert", consumes="application/json", produces = {MediaType.TEXT_PLAIN_VALUE})
 	public ResponseEntity<String> post(@RequestBody Com_CommentVO ccvo, HttpServletRequest request){
-		HttpSession ses = request.getSession();
-		ccvo.setId("1111");
-		ccvo.setNickname("{ses.nickname}");
-		
+	
 		log.info(">>> ccvo : " + ccvo.toString());
 		
 		int isOk = ccsv.insertCom_Comment(ccvo);
@@ -51,22 +52,32 @@ public class Com_CommentController {
 	
 	//댓글 리스트 출력
 	@GetMapping(value="/commentList/{com_num}", produces = {MediaType.APPLICATION_JSON_VALUE} )
-	public ResponseEntity<Map<String, Object>> selectCom_CommentList(@PathVariable("com_num") int com_num, HttpServletRequest request){
+	public ResponseEntity<Map<String, Object>> selectCom_CommentList(@PathVariable("com_num") int com_num, HttpServletRequest request,
+				Model m, Com_CommentPagingVO pgvo){
+		
 		log.info(">>> com_com_num : " +com_num);
 		HttpSession ses = request.getSession();
+		UserVO sesUser = (UserVO)ses.getAttribute("ses");
 		Map<String, Object> listMap = new HashMap<>(); 
 		
+//		//댓글 페이징 설정
+//		log.info(">>> pageNo: "+pgvo.getCommentNo());
+//		log.info(">>> pageStart: "+pgvo.getCommentStart());
+//		log.info(">>> pageQty: "+pgvo.getCty());
+//		 
+//		int totalCount = ccsv.getTotalCmtCnt(pgvo);
+//		Com_CommentPagingHandler ph = new Com_CommentPagingHandler(pgvo, totalCount);
+//		m.addAttribute("ph", ph);
+		
 		//해당 id가 좋아요한 댓글 리스트
-		String id = "2222";
+		String id = sesUser.getId();
 		List<Integer> likeList = ccsv.getLikeCom_CommentCnt(id); 
 		log.info(">>> likeList :"+likeList);
-		
 		listMap.put("likeList", likeList);
 		
 		//해당 게시글의 댓글 전체 리스트
 		List<Com_CommentVO> commentList = ccsv.selectCom_commentList(com_num);
 		log.info(">>> com_List : " +commentList.toString());
-		 
 		listMap.put("commentList", commentList);
 		
 		return new ResponseEntity<>(listMap, HttpStatus.OK);     
@@ -103,7 +114,9 @@ public class Com_CommentController {
 		
 		log.info(">>> com_com_num : " + com_com_num);
 		HttpSession ses = request.getSession();
-		Com_Comment_LikeVO cclvo = new Com_Comment_LikeVO("2222", com_com_num);
+		UserVO sesUser = (UserVO)ses.getAttribute("ses");  
+		log.info(">>> ses.id : " + sesUser.getId());
+		Com_Comment_LikeVO cclvo = new Com_Comment_LikeVO(sesUser.getId(), com_com_num);
 		
 		int isOk = ccsv.updateCom_CommentLike(cclvo);
 		log.info(">>> isOk : " + isOk);
@@ -111,6 +124,8 @@ public class Com_CommentController {
 		return isOk > 0? new ResponseEntity<String>("1",HttpStatus.OK)
 				: new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+	
+	
 
 }
 

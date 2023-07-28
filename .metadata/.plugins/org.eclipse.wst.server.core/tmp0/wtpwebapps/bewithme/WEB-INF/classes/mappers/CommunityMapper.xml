@@ -10,15 +10,15 @@
 </insert>
 
 <select id="selectListByLatest" resultType="com.bewithme.www.domain.CommunityVO">
-  	select * from community order by com_reg_date desc
+  	select * from community order by com_reg_date desc, com_num desc
 </select>
 
 <select id="selectListByPopularity" resultType="com.bewithme.www.domain.CommunityVO">
-  	select * from community order by com_like_cnt desc
+  	select * from community order by com_like_cnt desc, com_num desc
 </select>
 
 <select id="selectRecommendList" resultType="com.bewithme.www.domain.CommunityVO">
-  	select * from community order by com_cnt desc 
+  	select * from community order by com_cnt desc , com_num desc
 </select>
 
 <select id="selectOne" resultType="com.bewithme.www.domain.CommunityVO">
@@ -40,5 +40,10 @@
 <update id="updateCom_comment_cntDown">
 	update community set com_comment_cnt = com_comment_cnt-1 where com_num = #{com_num}
 </update>
+
+<select id="selectSearchList" resultType="com.bewithme.www.domain.CommunityVO">
+  	select * from community where com_title like concat('%', #{searchKeyword}, '%') order by com_reg_date desc, com_num desc
+</select>
+
 
 </mapper>

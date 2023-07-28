@@ -4,6 +4,8 @@ package com.bewithme.www.service;
 
 import javax.inject.Inject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.bewithme.www.domain.SubjectVO;
@@ -20,6 +22,8 @@ public class SubjectServiceImpl implements SubjectService {
 	private SubjectDAO sdao;
 	@Inject
 	private CourseDAO cdao;
+	
+	private static final Logger log = LoggerFactory.getLogger(SubjectServiceImpl.class);
 
 
 	@Override

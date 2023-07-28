@@ -8,7 +8,7 @@ public interface TodoDAO {
 
 	int insertTodo(TodoVO todo);
 
-	List<TodoVO> getList(String id);
+	List<TodoVO> getList();
 
 	int updateTodo(int todo_num);
 

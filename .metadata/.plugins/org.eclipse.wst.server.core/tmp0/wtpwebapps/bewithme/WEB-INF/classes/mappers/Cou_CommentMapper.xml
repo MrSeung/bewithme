@@ -14,11 +14,10 @@
 	</select>
 	
 	<update id="edit">
-		update cou_comment set cou_com_content=#{cou_com_content}, cou_com_isMod='Y' where cou_com_num=#{cou_com_num}
+		update cou_comment set cou_com_content=#{cou_com_content} where cou_com_num=#{cou_com_num}
 	</update>
 	
 	<delete id="remove">
 		delete from cou_comment where cou_com_num=#{cou_com_num}
 	</delete>
-	
 </mapper>

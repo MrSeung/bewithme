@@ -14,7 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
 <!-- include summernote-ko-KR -->
 <script src="/resources/js/summernote-ko-KR.js"></script>
-<link href="/resources/css/register2.css" rel="stylesheet">
+<link href="/resources/css/register.css" rel="stylesheet">
 <script>
 $(document).ready(function() {
      $('#summernote').summernote({
@@ -85,7 +85,7 @@ function goWrite(frm) {
                   </a>
                   <h4>게시글 작성</h4>
                </div>  
-                 <input type="hidden" name="sub_num" value="${sub_num}">
+                 
                <div class="title">
                   <p>제목</p>
                   <input type="text" name="cou_title" placeholder="제목을 입력해주세요" >
@@ -93,7 +93,7 @@ function goWrite(frm) {
                
                <div>
                   <p>닉네임</p>
-                  <input type="text" name="id" value="su@naver.com">
+                  <input type="text" name="id">
                   <!-- readonly="readonly"  placeholder="정은" --> 
                </div>
                

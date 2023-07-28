@@ -582,7 +582,6 @@ td {
   color: #FFAC4D;
   background-color: inherit;
   cursor: pointer;
-  border : none;
 }
 
 .schedule {
@@ -598,157 +597,25 @@ td {
   font-size: 14px;
 }
 
-.schedule button{
-  background-color: inherit;
-  border-radius: 5px;
-  cursor: pointer;
-  border : none;
-}
-
-.schedule button:nth-of-type(1){
-  color: gray;
-}
-.schedule button:nth-of-type(2){
-  color: gray;
-}
-.schedule button:nth-of-type(1):hover{
-  color: #6C72CD;
-}
-.schedule button:nth-of-type(2):hover{
-  color: #CB68C3;
-}
-
-
-/* 캘린더 추가 모달 디자인 코드 */
-        /* input과 textarea 스타일 */
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        form label {
-            margin-bottom: 5px;
-        }
-
-        form input,
-        form textarea {
-            border: none;
-            /* 테두리 없앰 */
-            outline: none;
-            /* 포커스 시 테두리 없앰 */
-            background-color: inherit;
-            color : white;
-        }
-        
-        form input[type="date"]::-webkit-calendar-picker-indicator {
-           filter: invert(1);
-           cursor:pointer;
-            /* 캘린더 아이콘 색상을 흰색으로 바꿈 */
-        }
-
-        /* input 그룹 스타일 */
-        .input-group {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px solid #ccc;
-            /* 수평선 스타일 */
-            margin: 10px 0;
-        }
-
-        /* 모달 헤딩 스타일 */
-        .modal-heading1, .modal-heading2 {
-            text-align: center;
-            /* 가운데 정렬 */
-            margin-bottom: 10%;
-            margin-top: 2%;
-        }
-        .modal-heading1{
-            color: #FFAC4D;
-        }
-        .modal-heading2{
-            color: #6C72CD;
-        }
-
-        /* 버튼 그룹 스타일 */
-        .button-group1, .button-group2 {
-            display: flex;
-            justify-content: center;
-            margin-top: 5%;
-        }
-
-        /* 일정 추가 버튼 스타일 */
-        .button-group1 button {
-            padding: 10px 20px;
-            background-color:#FFAC4D;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .button-group1 button:hover {
-            background-color:#db9646;
-        }
-
-        .button-group2 button {
-            padding: 10px 20px;
-            background-color:#6C72CD;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .button-group2 button:hover {
-            background-color:#5d63b8;
-        }
-
         /* 모달 폼을 화면 정중앙에 배치하기 위한 CSS */
         .modal-overlay {
-            visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5); /* 배경을 투명하게 만듦 */
+            z-index: 9999;
+            visibility: hidden;
         }
         
         .modal {
-      background-color: #17181F;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      max-width: 300px;
-      border-radius: 10px;
-        }
-        
-                /* 모달 폼을 화면 정중앙에 배치하기 위한 CSS */
-        .modal-overlay-modify {
-            visibility: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-        
-        .modal-modify {
-      background-color: #17181F;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      max-width: 300px;
-      border-radius: 10px;
+            background-color: #17181F;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #888;
         }
         

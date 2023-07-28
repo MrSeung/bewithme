@@ -27,6 +27,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.bewithme.www.domain.CommunityVO;
 import com.bewithme.www.domain.Community_LikeVO;
+import com.bewithme.www.domain.UserVO;
 import com.bewithme.www.service.CommunityService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -75,14 +76,20 @@ public class CommunityController {
 	@GetMapping(value="/communityList/{sort_type}", produces = {MediaType.APPLICATION_JSON_VALUE} )
 	public ResponseEntity<Map<String, Object>> selectCommunityList(@PathVariable("sort_type") String sortType,  HttpServletRequest request){
 		
+		//현재 로그인한 id
 		HttpSession ses = request.getSession();
+		UserVO sesUser = (UserVO)ses.getAttribute("ses");
+		String id = sesUser.getId();
+		
+		//좋아요 리스트와 전체리스트를 담을 map
 		Map<String, Object> listMap = new HashMap<>(); 
 		
 		//해당id가 좋아요한 게시글 번호리스트
-		String id = "2222";
 		List<Integer> likeList = csv.getLikeCommentCnt(id); 
 		listMap.put("likeList", likeList);
 		log.info(">>> likeList :"+likeList);
+		
+		
 		//최신순, 인기순 별 게시글 전체 리스트
 		if (sortType.equals("0")) {
 		        // 최신순
@@ -129,7 +136,8 @@ public class CommunityController {
 		
 		log.info(">>> com_num : " + com_num);
 		HttpSession ses = request.getSession();
-		Community_LikeVO clvo = new Community_LikeVO("2222", com_num);
+		UserVO sesUser = (UserVO)ses.getAttribute("ses");
+		Community_LikeVO clvo = new Community_LikeVO(sesUser.getId(), com_num);
 		
 		int isOk = csv.updateCommunityLike(clvo);
 		log.info(">>> isOk : " + isOk);
@@ -137,6 +145,33 @@ public class CommunityController {
 		return isOk > 0? new ResponseEntity<String>("1",HttpStatus.OK)
 				: new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
 	}	
+	
+	//검색
+	@GetMapping(value="/communitySearchList/{searchKeyword}", produces = {MediaType.APPLICATION_JSON_VALUE} )
+	public ResponseEntity<Map<String, Object>> communitySearchList(@PathVariable("searchKeyword") String searchKeyword,  HttpServletRequest request){
+		
+		//좋아요 리스트와 전체리스트를 담을 map
+		Map<String, Object> listMap = new HashMap<>(); 
+		
+		//현재 로그인한 id
+		HttpSession ses = request.getSession();
+		UserVO sesUser = (UserVO)ses.getAttribute("ses");
+		String id = sesUser.getId();
+		
+		//해당id가 좋아요한 게시글 번호리스트
+		List<Integer> likeList = csv.getLikeCommentCnt(id); 
+		log.info("--" + likeList);
+		listMap.put("likeList", likeList);
+		
+		
+		//최신순 게시글 전체 리스트 (제목에 검색 내용이 해당하는)
+		log.info(">>>searchKeyword : "+ searchKeyword);
+		List<CommunityVO> communityList = csv.selectComunnitySearchList(searchKeyword);
+		log.info("--" + communityList);
+		listMap.put("communityList", communityList); 
+
+		return new ResponseEntity<Map<String, Object>>(listMap, HttpStatus.OK);
+	} 
 	
 }
 

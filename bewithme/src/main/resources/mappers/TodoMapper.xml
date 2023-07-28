@@ -8,7 +8,7 @@
   		values(#{id},#{todo_content})
   	</insert>
   	<select id="getList" resultType="com.bewithme.www.domain.TodoVO">
-  		select * from todo where id=#{id} order by isDel asc, todo_num desc
+  		select * from todo order by isDel asc, todo_num desc
   	</select>
   	<update id="updateTodo" parameterType="int">
   		update todo set isDel='y'

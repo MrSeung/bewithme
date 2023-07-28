@@ -1,0 +1,31 @@
+package com.bewithme.www.controller;
+
+import javax.inject.Inject;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.bewithme.www.service.BookmarkService;
+
+@Controller
+@RequestMapping("/bookmark/*")
+public class BookmarkController {
+
+	private static final Logger log = LoggerFactory.getLogger(BookmarkController.class);
+	
+	@Inject
+	private BookmarkService bsv;
+	
+	//북마크 페이지로 이동
+	@GetMapping("/bookmarkpage")
+	public String bookmarkPage() {
+		return "/subject/bookmark";
+	}
+	
+	//북마크 리스트 출력
+	@GetMapping(value = "/bookmarkList", produces = {MediaType.APPLICATION_JSON_VALUE})
+	
+}

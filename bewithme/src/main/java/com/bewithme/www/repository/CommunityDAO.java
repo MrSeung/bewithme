@@ -26,6 +26,8 @@ public interface CommunityDAO {
 
 	int updateCom_comment_cntDown(int com_num);
 
+	List<CommunityVO> selectSearchList(String searchKeyword);
+
 
 
 }

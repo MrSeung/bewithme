@@ -5,8 +5,11 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import com.bewithme.www.controller.ChatBotController;
 import com.bewithme.www.domain.ChatVO;
 import com.bewithme.www.repository.ChatDAO;
 
@@ -18,6 +21,8 @@ public class ChatServiceImpl implements ChatService {
 
 	@Inject
 	private ChatDAO chatDAO;
+	
+	private static final Logger log = LoggerFactory.getLogger(ChatServiceImpl.class);
 
 	@Override
 	public int insertMsg(ChatVO chat) {

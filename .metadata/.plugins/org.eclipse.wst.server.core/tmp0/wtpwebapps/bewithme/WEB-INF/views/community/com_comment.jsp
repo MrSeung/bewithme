@@ -19,23 +19,15 @@
         <!-- 좌측/ 전체 동일한 메뉴바 부분 -->
        <div class="left">
            <img src="/resources/img/logo.png" class="logo" alt="">
-<<<<<<< HEAD
-            <div class="menu_bar">
-                <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
-                <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
-                <button><a href="/menu/community">📖<span class="not"> Community</span></a></button><br>
-                <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
-=======
            <div class="menu_bar">
-               <button><a href=""> 🏠<span> Home</span></a></button><br>
-               <button><a href="">📝<span> Subject</span></a></button><br>
+               <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
+               <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
                <button><a href="/community/communitypage">📖<span class="not"> Community</span></a></button><br>
-               <button><a href="">📁<span> Q&A</span></a></button><br>
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
+               <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
-                <button><a href="/member/logout">🗑 Log out</a></button><br>
+                <button><a href="">🗑 Log out</a></button><br>
             </div>
         </div>
         <!-- 우측/ Comment 부분 -->
@@ -43,11 +35,11 @@
             
             <!-- 고정/ 메뉴 선택 -->
             <div class="nav_bar">
-                <div class="nav">
-                    <button> 전체 </button>
-                    <button> 개발 </button>
-                    <button> 상담 </button>
-                    <button> MY </button>
+                <div class="navBtns">
+                    <button value="전체"> 전체 </button>
+                    <button value="개발"> 개발 </button>
+                    <button value="상담"> 상담 </button>
+                    <button value="MY"> MY </button>
                 </div>
                 <a href="#" class="question">
                     <button>💡 질문하기</button>
@@ -119,7 +111,7 @@
                         <textarea placeholder="내용을 입력해 주세요." maxlength="500" wrap="soft" id="com_com_content"></textarea>
                         <div class="cw_line"></div>
                         <div>
-                            <span>{ses.nickname}</span>
+                            <span>${ses.nickname}</span>
                             <button type="submit" id="subBtn">작성하기</button>
                         </div>
                     </div>
@@ -130,7 +122,23 @@
 
                 </div><!--class="comment"-->
                 
+       <%--          <!-- 페이징 -->
+				<div class="paging">
+					<c:if test="${ph.prev}">
+					<a href="/com_community/commentList?pageNo=${ph.startPage-1 }&qty=${ph.pgvo.cty}">이전</a> 
+					</c:if>
+				
+					<c:forEach begin="${ph.startPage}" end="${ph.endPage }" var="i">
+						<a href="/com_community/commentList?pageNo=${i }&qty=${ph.pgvo.cty}}">${i } |</a>
+					</c:forEach>
+					
+					<c:if test="${ph.next}">
+					<a href="/com_community/commentList?pageNo=${ph.endPage+1 }&qty=${ph.pgvo.cty}">다음</a> 
+					</c:if>
+				</div> --%>
+                
             </div><!--class="main"-->
+      
             
             <div class="up">
                 <a href="#top" id="end"> 
@@ -140,20 +148,20 @@
                 </a>
             </div>
 
+			
         </div><!--class="right"-->
 
 </div>
 
 
-<<<<<<< HEAD
-<script src="/resources/js/comment.js"></script>
-=======
+
 <script type="text/javascript" src="/resources/js/com_comment.js"></script>
 <script type="text/javascript">
 	const com_num = '<c:out value="${cvo.com_num}" />';
-	getCommentList(com_num)
+	const sesNickname = '<c:out value="${ses.nickname}" />'
+	const sesId = '<c:out value="${ses.id}" />'
+	getCommentList(com_num);
 </script>
 
->>>>>>> 2584c0c985f792a78db57c7e936ac034698a1193
 </body>
 </html>

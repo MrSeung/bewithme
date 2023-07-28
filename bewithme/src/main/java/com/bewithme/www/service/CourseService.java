@@ -2,7 +2,6 @@ package com.bewithme.www.service;
 
 import java.util.List;
 
-import com.bewithme.www.domain.BookmarkVO;
 import com.bewithme.www.domain.CourseVO;
 
 public interface CourseService {
@@ -16,12 +15,6 @@ public interface CourseService {
 	public int remove(int cou_num);
 
 	public int cou_cnt(int cou_num);
-
-	public int updateBookmark(BookmarkVO bookvo);
-
-	public List<Integer> bookList(String id);
-
-
 
 
 }

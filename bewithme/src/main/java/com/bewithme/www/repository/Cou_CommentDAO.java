@@ -14,8 +14,4 @@ public interface Cou_CommentDAO {
 
 	int remove(int cou_com_num);
 
-	String isMod(int cou_num);
-
-
-
 }

@@ -23,4 +23,6 @@ public class CourseVO {
 	private int sub_num;
 	private String id;
 	private int cou_count;
+	
+	
 }

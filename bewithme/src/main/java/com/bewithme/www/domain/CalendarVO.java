@@ -14,8 +14,41 @@ import lombok.ToString;
 public class CalendarVO {
 	private int cal_num;
 	private String id;
-	private String start_date;
-	private String end_date;
+	private String date;
 	private String cal_content;
 	private String url;
+	
+	public int getCal_num() {
+		return cal_num;
+	}
+	public void setCal_num(int cal_num) {
+		this.cal_num = cal_num;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public String getCal_content() {
+		return cal_content;
+	}
+	public void setCal_content(String cal_content) {
+		this.cal_content = cal_content;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	
+	
+	
 }
