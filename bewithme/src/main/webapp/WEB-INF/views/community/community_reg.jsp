@@ -79,10 +79,11 @@
                </div>
                
                <div class="file_list">
-                        <hr>
-                        <p>파일</p>
-                  <button type="submit">파일 첨부 + </button>
-               	  <div class="files">
+                   <hr>
+                   <p>파일</p>
+                   <input type="file" id="file" name="files" multiple style="display:none">
+                  <button type="button" id="trigger" >파일 첨부 + </button>
+               	  <div class="files" id="fileZone">
                	  	<!-- 파일이 출력되는 자리 -->
                	  </div>
                </div>

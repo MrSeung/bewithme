@@ -22,7 +22,7 @@ import net.coobird.thumbnailator.Thumbnails;
 @AllArgsConstructor
 @Component
 public class FileHandler {
-	private final String UP_DIR = "D:\\_myweb\\_java\\_fileUpload";
+	private final String UP_DIR = "C:\\summernoteImg";
 	
 	public List<Com_FileVO> uploadFiles(MultipartFile[] files){
 		LocalDate date = LocalDate.now();
@@ -71,7 +71,7 @@ public class FileHandler {
 				if(isImageFile(storeFile)) {
 					fvo.setCom_file_type(0);
 					File thumbNail = new File(folders, uuid.toString()+"_th_"+onlyFileName);
-					Thumbnails.of(storeFile).size(75, 75).toFile(thumbNail);
+					Thumbnails.of(storeFile).size(150, 150).toFile(thumbNail);
 				}
 			} catch (Exception e) {
 				log.info(">>> file 생성 오류~!!");
