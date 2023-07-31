@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
+import com.bewithme.www.domain.BookmarkVO;
 import com.bewithme.www.domain.CourseVO;
 import com.bewithme.www.repository.BookmarkDAO;
 import com.bewithme.www.repository.CourseDAO;
@@ -28,5 +29,11 @@ public class BookmarkServiceImpl implements BookmarkService{
 	public List<CourseVO> selectCourseList() {
 		// 강의 전체 리스트 
 		return cdao.selectAllList();
+	}
+
+	@Override
+	public int deleteBookmark(BookmarkVO bvo) {
+		// 강의 삭제
+		return bdao.deleteBookmark(bvo);
 	}
 }

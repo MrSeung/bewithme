@@ -68,7 +68,7 @@ public class Com_CommentServiceImpl implements Com_CommentService{
 		//댓글 삭제
 		log.info("com_comment ServiceImpl delete in!");
 		int com_num = ccdao.getCom_num(com_com_num); //해당 댓글이 위치한 게시글 번호
-		log.info("-----------------------" + com_num);
+
 		int isOk = ccdao.delete(com_com_num); //댓글 삭제
 		if(isOk>0) {
 			log.info(">>> com_comment delete 성공");
@@ -104,12 +104,6 @@ public class Com_CommentServiceImpl implements Com_CommentService{
 		}
 	}
 
-	@Override
-	public int getTotalCmtCnt(Com_CommentPagingVO pgvo) {
-		// 해당 게시글의 댓글 총 개수 구하기
-		log.info("com_comment ServiceImpl getTotalCmtCnt in!");
-		return ccdao.selectCommentCnt(pgvo.getCommentNo());
-	}
 
 	
 }

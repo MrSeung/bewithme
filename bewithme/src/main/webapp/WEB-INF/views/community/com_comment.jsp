@@ -41,7 +41,7 @@
                     <button value="상담"> 상담 </button>
                     <button value="MY"> MY </button>
                 </div>
-                <a href="#" class="question">
+                <a href="/community/insert" class="question">
                     <button>💡 질문하기</button>
                 </a>
             </div>
@@ -62,11 +62,11 @@
                         <div class="writer">${cvo.nickname}</div>
                         <div class="reaction">
                             <div class="reaction_left">
-                                <span>${cvo.com_reg_date} |</span>
-                                <span>
+                                <span>${cvo.com_mod_date} |</span>
+                                <span id="recomment_cnt">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
                                         <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
-                                    </svg> ${comment_cnt} |
+                                    </svg> ${cvo.com_comment_cnt} |
                                 </span>
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
@@ -75,6 +75,9 @@
                                 </span>
                             </div>
                             <div class="reaction_right">
+                            	<c:if test="${cvo.id eq ses.id || ses.admin eq 1}">
+                            		<a href="/community/modifypage?com_num=${cvo.com_num}"><button id="modDelBtn">✔ 수정/삭제</button></a>
+                            	</c:if>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
@@ -103,7 +106,7 @@
                 <div class="comment">
 
                     <div class="comment_count">
-                        댓글 <span>${comment_cnt}</span>
+                        댓글 <span id="comment_cnt">${cvo.com_comment_cnt}</span>
                     </div>
 
                     <!--작성부분-->
@@ -122,20 +125,7 @@
 
                 </div><!--class="comment"-->
                 
-       <%--          <!-- 페이징 -->
-				<div class="paging">
-					<c:if test="${ph.prev}">
-					<a href="/com_community/commentList?pageNo=${ph.startPage-1 }&qty=${ph.pgvo.cty}">이전</a> 
-					</c:if>
-				
-					<c:forEach begin="${ph.startPage}" end="${ph.endPage }" var="i">
-						<a href="/com_community/commentList?pageNo=${i }&qty=${ph.pgvo.cty}}">${i } |</a>
-					</c:forEach>
-					
-					<c:if test="${ph.next}">
-					<a href="/com_community/commentList?pageNo=${ph.endPage+1 }&qty=${ph.pgvo.cty}">다음</a> 
-					</c:if>
-				</div> --%>
+
                 
             </div><!--class="main"-->
       
@@ -160,7 +150,9 @@
 	const com_num = '<c:out value="${cvo.com_num}" />';
 	const sesNickname = '<c:out value="${ses.nickname}" />'
 	const sesId = '<c:out value="${ses.id}" />'
+	const sesAdmin = '<c:out value="${ses.admin}" />'
 	getCommentList(com_num);
+	console.log(${ses.admin});
 </script>
 
 </body>

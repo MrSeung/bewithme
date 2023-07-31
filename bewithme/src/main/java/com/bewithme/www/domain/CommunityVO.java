@@ -12,6 +12,7 @@ public class CommunityVO {
 	private int com_like_cnt; //좋아요수
 	private int com_comment_cnt; //댓글 수
 	private String id; //user연결
+	private String com_mod_date;
 
 	
 	//getter,setter
@@ -75,23 +76,31 @@ public class CommunityVO {
 	public void setCom_comment_cnt(int com_comment_cnt) {
 		this.com_comment_cnt = com_comment_cnt;
 	}
+	public String getCom_mod_date() {
+		return com_mod_date;
+	}
+	public void setCom_mod_date(String com_mod_date) {
+		this.com_mod_date = com_mod_date;
+	}
+	
 	
 	//toString
 	@Override
 	public String toString() {
 		return "CommunityVO [com_num=" + com_num + ", nickname=" + nickname + ", com_title=" + com_title
 				+ ", com_content=" + com_content + ", com_category=" + com_category + ", com_reg_date=" + com_reg_date
-				+ ", com_cnt=" + com_cnt + ", com_like_cnt=" + com_like_cnt
-				+ ", com_comment_cnt=" + com_comment_cnt + ", id=" + id + "]";
+				+ ", com_cnt=" + com_cnt + ", com_like_cnt=" + com_like_cnt + ", com_comment_cnt=" + com_comment_cnt
+				+ ", id=" + id + ", com_mod_date=" + com_mod_date + "]";
 	}
-	
+
+
 	
 	//생성자
 	public CommunityVO() {}
 	
 	//전체
 	public CommunityVO(int com_num, String nickname, String com_title, String com_content, String com_category,
-			String com_reg_date, int com_cnt, int com_like_cnt, int com_comment_cnt, String id) {
+			String com_reg_date, int com_cnt, int com_like_cnt, int com_comment_cnt, String id, String com_mod_date) {
 		this.com_num = com_num;
 		this.nickname = nickname;
 		this.com_title = com_title;
@@ -102,6 +111,7 @@ public class CommunityVO {
 		this.com_like_cnt = com_like_cnt;
 		this.com_comment_cnt = com_comment_cnt;
 		this.id = id;
+		this.com_mod_date = com_mod_date;
 	}
 	
 	

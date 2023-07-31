@@ -20,5 +20,5 @@ public interface Com_CommentService {
 
 	List<Integer> getLikeCom_CommentCnt(String id);
 
-	int getTotalCmtCnt(Com_CommentPagingVO pgvo);
+
 }

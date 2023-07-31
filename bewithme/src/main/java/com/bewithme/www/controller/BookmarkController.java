@@ -14,9 +14,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bewithme.www.domain.BookmarkVO;
 import com.bewithme.www.domain.CourseVO;
 import com.bewithme.www.domain.UserVO;
 import com.bewithme.www.service.BookmarkService;
@@ -59,6 +62,23 @@ public class BookmarkController {
         log.info(">>> CourseList :"+CourseList);
         
 		return new ResponseEntity<>(listMap, HttpStatus.OK);
+	}
+	
+	//댓글 삭제
+	@DeleteMapping(value="/{cou_num}", produces = {MediaType.TEXT_PLAIN_VALUE})
+	private ResponseEntity<String> deleteBookmark(@PathVariable("cou_num")int cou_num, HttpServletRequest request){
+		log.info(">>> delete cou_num : "+ cou_num);
+		//현재 로그인한 id
+		HttpSession ses = request.getSession();
+		UserVO sesUser = (UserVO)ses.getAttribute("ses");
+		String id = sesUser.getId();
+		
+		BookmarkVO bvo = new BookmarkVO(id, cou_num);
+		
+		int isOk = bsv.deleteBookmark(bvo);
+		return isOk > 0? new ResponseEntity<String>("1",HttpStatus.OK)
+				: new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
+		
 	}
 
 

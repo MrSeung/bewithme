@@ -41,10 +41,10 @@ $(document).ready(function() {
        <div class="left">
            <img src="/resources/img/logo.png" class="logo" alt="">
            <div class="menu_bar">
-               <button><a href=""> 🏠<span> Home</span></a></button><br>
-               <button><a href="">📝<span> Subject</span></a></button><br>
+               <button><a href="/menu/home"> 🏠<span> Home</span></a></button><br>
+               <button><a href="/menu/subject">📝<span> Subject</span></a></button><br>
                <button><a href="/community/communitypage">📖<span class="not"> Community</span></a></button><br>
-               <button><a href="">📁<span> Q&A</span></a></button><br>
+               <button><a href="/menu/qna">📁<span> Q&A</span></a></button><br>
             </div>
             <div class="sebu">
                 <button><a href="">⚙ Setting</a></button><br>
@@ -94,10 +94,11 @@ $(document).ready(function() {
                </div>
                
                <div class="file_list">
-                        <hr>
-                        <p>파일</p>
-                  <button type="submit">파일 첨부 + </button>
-               	  <div class="files">
+                  <hr>
+                  <p>파일</p>
+                  <input type="file" name="files" id="file" multiple style="display:none">
+                  <button type="button" id="trigger">썸네일 선택 + </button>
+               	  <div class="filezone">
                	  	<!-- 파일이 출력되는 자리 -->
                	  </div>
                </div>
@@ -108,8 +109,8 @@ $(document).ready(function() {
             <div class="wright">
 	            <div class="wtitle">
 	                <h4>✍ 상세 설명</h4>
-	                <input id="subBtn" type="button" value="저장" class="wbutton"
-	                     onclick="goWrite(this.form)"/>
+	                <input type="button" class="wbutton" value="자리" style="visibility: hidden;"/>
+	                <input id="subBtn" type="button" value="저장" class="wbutton"/>
 	            </div>
 	               <!-- 썸머노트 들어갈 곳 -->
 	            <div style=" margin: auto;" class="summer">

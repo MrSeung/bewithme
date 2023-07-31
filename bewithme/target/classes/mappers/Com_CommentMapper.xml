@@ -27,12 +27,12 @@
 	delete from com_comment where com_com_num=#{com_com_num}
 </delete>
 
-<select id="getCom_num" resultType="int">
-	select com_num from com_comment where com_com_num = #{com_com_num}
-</select>
-
 <update id="updateLike">
 	update com_comment set com_com_like_cnt = #{com_com_like_cnt} where com_com_num = #{com_com_num}
 </update>
+
+<select id="getCom_num" resultType="int">
+	select com_num from com_comment where com_com_num = #{com_com_num}
+</select>
 
 </mapper>

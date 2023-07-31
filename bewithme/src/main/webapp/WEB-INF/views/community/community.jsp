@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/css/community.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.4.5/swiper.scss">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <title>community</title>
 </head>
@@ -51,6 +52,8 @@
   
             <!-- 스크롤/ 게시판 리스트 -->
             <div class="main">
+            
+           		<a href="#end" id="top"></a>
 
                 <div class="recommend_coment" id="recommend_coment">
 
@@ -93,8 +96,17 @@
                 <div class="board" id="board">
                     <!-- 게시판 출력 부분 -->
         		</div>
-	</div>
-	</div>
+		</div><!--class="main"-->
+		
+		 <div class="up">
+                <a href="#top" id="end"> 
+                    <span class="material-symbols-outlined">
+                            arrow_upward
+                    </span>
+                </a>
+       	</div>
+		
+	</div><!--class="right"-->
 </div>
 
 <script type="text/javascript" src="../resources/js/community.js"></script>

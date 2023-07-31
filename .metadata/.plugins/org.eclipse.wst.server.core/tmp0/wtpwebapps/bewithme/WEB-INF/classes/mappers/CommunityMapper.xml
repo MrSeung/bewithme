@@ -10,15 +10,15 @@
 </insert>
 
 <select id="selectListByLatest" resultType="com.bewithme.www.domain.CommunityVO">
-  	select * from community order by com_reg_date desc, com_num desc
+  	select * from community where com_isDel = 'N' order by com_reg_date desc, com_num desc
 </select>
 
 <select id="selectListByPopularity" resultType="com.bewithme.www.domain.CommunityVO">
-  	select * from community order by com_like_cnt desc, com_num desc
+  	select * from community where com_isDel = 'N' order by com_like_cnt desc, com_num desc
 </select>
 
 <select id="selectRecommendList" resultType="com.bewithme.www.domain.CommunityVO">
-  	select * from community order by com_cnt desc , com_num desc
+  	select * from community where com_isDel = 'N' order by com_cnt desc , com_num desc
 </select>
 
 <select id="selectOne" resultType="com.bewithme.www.domain.CommunityVO">
@@ -42,8 +42,17 @@
 </update>
 
 <select id="selectSearchList" resultType="com.bewithme.www.domain.CommunityVO">
-  	select * from community where com_title like concat('%', #{searchKeyword}, '%') order by com_reg_date desc, com_num desc
+  	select * from community where com_title like concat('%', #{searchKeyword}, '%') and where com_isDel = 'N'
+  		 order by com_reg_date desc, com_num desc
 </select>
 
+<update id="updateCommunity">
+	update community set com_title = #{com_title}, com_content = #{com_content}, com_category = #{com_category},
+		com_mod_date = now() where com_num = #{com_num}
+</update>
+
+<update id="deleteCommunity">
+	update community set com_isDel = 'Y' where com_num = #{com_num}
+</update>
 
 </mapper>

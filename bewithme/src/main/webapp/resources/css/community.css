@@ -305,11 +305,6 @@ body{
     padding-top: 15px;
 }
 
-/* .sort>button:first-child{
-    color: white;
-    font-weight: 700;
-} */
-
 .selected_btn {
    color: white !important; 
    font-weight: 700 !important;
@@ -442,5 +437,20 @@ body{
     width: 150px;
     height: 150px;
     border-radius: 20px;
+}
+
+/* 올라가는 버튼 */
+.up{
+    position: fixed;
+    bottom: 5%; 
+    right: 4%;
+}
+.up span{
+    font-size: 30px;
+    color: #CB68C3;
+    background-color: inherit;
+}
+.up span:hover{
+    color: white;
 }
 

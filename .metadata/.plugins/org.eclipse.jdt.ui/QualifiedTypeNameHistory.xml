@@ -5,4 +5,7 @@
     <fullyQualifiedTypeName name="com.bewithme.www.domain.Com_CommentPagingVO"/>
     <fullyQualifiedTypeName name="com.bewithme.www.handler.Com_CommentPagingHandler.PagingHandler"/>
     <fullyQualifiedTypeName name="com.bewithme.www.handler.Com_CommentPagingHandler"/>
+    <fullyQualifiedTypeName name="com.bewithme.www.domain.BookmarkVO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
 </qualifiedTypeNameHistroy>

@@ -230,8 +230,8 @@ body{
 } 
 
 .file_list>button{
-    width: 100%;
-    height: 60%;
+   width: 100%;
+   height: 60%;
    border-radius: 5px;  
    background-color: #A4A4A4;
 }
@@ -257,7 +257,6 @@ body{
 }
 .wbutton {
     display: inline-block;
-    margin-left: 35%;  
     
     background-color: #6C72CD;
     color: #fff;
@@ -268,9 +267,37 @@ body{
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+	margin-left: 10px;
+}
+
+.wbutton:first-of-type{
+	margin-left: 27%;
 }
 
 .wbutton:hover {
     background-color: #6c3483;
+    cursor: pointer;
 }
+
+.summer{
+	color: black;
+}
+
+.modal-backdrop{
+	z-index: -10 !important; 
+}
+
+
+.modal-title{
+	display: inline-block;
+}
+
+.close{
+	font-size: 35px;
+}
+
+.container{
+	z-index: 10 !important;
+}
+
 

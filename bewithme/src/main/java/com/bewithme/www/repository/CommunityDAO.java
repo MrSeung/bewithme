@@ -28,6 +28,10 @@ public interface CommunityDAO {
 
 	List<CommunityVO> selectSearchList(String searchKeyword);
 
+	int updateCommunity(CommunityVO cvo);
+
+	int deleteCommunity(int com_num);
+
 
 
 }

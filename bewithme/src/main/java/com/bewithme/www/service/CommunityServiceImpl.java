@@ -99,13 +99,6 @@ public class CommunityServiceImpl implements CommunityService{
 			return cdao.updateLike(com_num, com_like_cnt);
 		}
 	}
-	
-	@Override
-	public int selectCommentCnt(int com_num) {
-		//게시판 당 댓글 수 
-		log.info("community ServiceImpl selectCommentCnt in!");
-		return ccdao.selectCommentCnt(com_num);
-	}
 
 
 	@Override
@@ -113,6 +106,22 @@ public class CommunityServiceImpl implements CommunityService{
 		// 검색된 게시글 리스트 출력
 		log.info("community ServiceImpl selectComunnitySearchList in!");
 		return cdao.selectSearchList(searchKeyword);
+	}
+
+
+	@Override
+	public int updateCommunity(CommunityVO cvo) {
+		// 게시글 수정
+		log.info("community ServiceImpl updateCommunity in!");
+		return cdao.updateCommunity(cvo);
+	}
+
+
+	@Override
+	public int deleteCommunity(int com_num) {
+		// 게시글 삭제
+		log.info("community ServiceImpl deleteCommunity in!");
+		return cdao.deleteCommunity(com_num);
 	}
 
 

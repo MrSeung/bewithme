@@ -18,8 +18,6 @@ public interface Com_CommentDAO {
 
 	int delete(int com_com_num);
 
-	int selectCommentCnt(int com_num);
-
 	int getCom_num(int com_com_num);
 
 	int selectLikeCnt(int com_com_num);

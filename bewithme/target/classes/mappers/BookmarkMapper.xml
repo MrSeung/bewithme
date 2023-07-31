@@ -8,7 +8,9 @@
 	select cou_num from bookmark where id=#{id}
 </select>
 
-
+<delete id="deleteBookmark" >
+	delete from bookmark where cou_num = #{cou_num} and id = #{id}
+</delete>
 
 
 

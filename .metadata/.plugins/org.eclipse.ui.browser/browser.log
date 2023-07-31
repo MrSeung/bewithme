@@ -179,3 +179,26 @@
 7월 27, 2023 23:37:15.651 NEW SESSION
 7월 27, 2023 23:37:15.651 [8364:396:0727/233715.648:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
 7월 28, 2023 24:25:21.506 [8364:396:0728/002521.505:ERROR:interface_endpoint_client.cc(697)] Message 5 rejected by interface blink.mojom.WidgetHost
+
+7월 28, 2023 14:15:35.969 NEW SESSION
+7월 28, 2023 14:15:35.969 [2216:9008:0728/141535.968:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 28, 2023 14:23:24.608 [2216:9008:0728/142324.608:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 28, 2023 14:23:24.608 [2216:9008:0728/142324.608:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 28, 2023 15:00:33.446 [9484:8272:0728/150033.446:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 28, 2023 15:02:06.777 [7236:5504:0728/150206.777:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+
+7월 29, 2023 23:16:38.225 NEW SESSION
+7월 29, 2023 23:16:38.225 [3288:6488:0729/231638.223:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 30, 2023 24:02:30.694 [3288:6488:0730/000230.694:ERROR:device_event_log_impl.cc(222)] [00:02:30.693] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+
+7월 30, 2023 15:57:13.801 NEW SESSION
+7월 30, 2023 15:57:13.801 [4312:6140:0730/155713.799:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 30, 2023 17:19:48.840 [4312:6140:0730/171948.839:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 30, 2023 17:19:48.841 [4312:6140:0730/171948.840:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 30, 2023 17:20:33.346 [4312:6140:0730/172033.345:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+7월 30, 2023 17:20:33.346 [4312:6140:0730/172033.345:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+7월 30, 2023 18:52:53.878 [4312:6140:0730/185253.877:ERROR:device_event_log_impl.cc(222)] [18:52:53.877] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+7월 30, 2023 20:42:55.415 [7560:1184:0730/204255.415:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 31, 2023 02:34:58.192 [12968:7928:0731/023458.191:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 31, 2023 03:11:43.947 [6436:3872:0731/031143.946:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 31, 2023 03:16:37.179 [11972:11216:0731/031637.179:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 

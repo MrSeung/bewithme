@@ -27,7 +27,6 @@ import com.bewithme.www.domain.Com_CommentPagingVO;
 import com.bewithme.www.domain.Com_CommentVO;
 import com.bewithme.www.domain.Com_Comment_LikeVO;
 import com.bewithme.www.domain.UserVO;
-import com.bewithme.www.handler.Com_CommentPagingHandler;
 import com.bewithme.www.service.Com_CommentService;
 
 @Controller
@@ -60,15 +59,7 @@ public class Com_CommentController {
 		UserVO sesUser = (UserVO)ses.getAttribute("ses");
 		Map<String, Object> listMap = new HashMap<>(); 
 		
-//		//댓글 페이징 설정
-//		log.info(">>> pageNo: "+pgvo.getCommentNo());
-//		log.info(">>> pageStart: "+pgvo.getCommentStart());
-//		log.info(">>> pageQty: "+pgvo.getCty());
-//		 
-//		int totalCount = ccsv.getTotalCmtCnt(pgvo);
-//		Com_CommentPagingHandler ph = new Com_CommentPagingHandler(pgvo, totalCount);
-//		m.addAttribute("ph", ph);
-		
+
 		//해당 id가 좋아요한 댓글 리스트
 		String id = sesUser.getId();
 		List<Integer> likeList = ccsv.getLikeCom_CommentCnt(id); 

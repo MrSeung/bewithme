@@ -23,11 +23,13 @@ public interface CommunityService {
 
 	int updateCommunityLike(Community_LikeVO clvo);
 
-	int selectCommentCnt(int com_num);
-
 	List<Integer> getLikeCommentCnt(String id);
 
 	List<CommunityVO> selectComunnitySearchList(String searchKeyword);
+
+	int updateCommunity(CommunityVO cvo);
+
+	int deleteCommunity(int com_num);
 
 
 

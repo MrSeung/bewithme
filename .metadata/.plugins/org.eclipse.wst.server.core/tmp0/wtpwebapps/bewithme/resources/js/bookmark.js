@@ -1,3 +1,6 @@
+
+// -- 북마크 리스트 출력 --
+
 //DB에서 정보 map으로 가져오기
 async function spreadBookmarkListFromServer(){
     try {
@@ -45,16 +48,24 @@ function getBookmarkList(){
                             case 3:
                                 tr += `<td>JAVA</td>`;
                                 break;
+                            case 4:
+                                tr += `<td>MYSQL</td>`;
+                                break;
+                            case 5:
+                                tr += `<td>JSP</td>`;
+                                break;
+                            case 6:
+                                tr += `<td>SPRING</td>`;
+                                break;
                             default:
-                                tr += `<td>ERROR</td>`;
+                                tr += `<td>-</td>`;
                                 break;
                         }
                         tr += `<td>`;
                         tr += `<div>
-                                    <span>${cvo.cou_num}</span>
                                     <a href="#">${cvo.cou_title}</a>
                                 </div>`;
-                        tr += `<button type="button" id="delBtn" value="${cvo.cou_num}">
+                        tr += `<button type="button" class="delBtn" value="${cvo.cou_num}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                                         <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
                                     </svg>
@@ -88,7 +99,59 @@ function getBookmarkList(){
 
 }
 
+//--------------------------------------------------------------------------------------------------
+// -- 북마크 삭제 --
+
 //담은 강의 삭제 (북마크 삭제)
-document.getElementById('delBtn').addEventListener('click',()=>{
+async function deleteBookmarkFromServer(cou_num){
+	try {
+		const url = "/bookmark/"+ cou_num;
+		const config={
+			method: "delete",
+			headers: {
+				'Content-Type' : 'application/json; charset=utf-8'
+			}
+		}
+		const resp = await fetch(url, config);
+		const result = await resp.text();  
+		return result;
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+
+//삭제 버튼 이벤트
+document.addEventListener('click', (e)=>{ 
+	if(e.target.classList.contains("delBtn")){
+		console.log("삭제버튼 클릭");
+
+		let cou_num = e.target.closest('button').value;
+		console.log("cou_num =" + cou_num);
+
+		deleteBookmarkFromServer(cou_num).then(result=>{
+			if(result > 0){
+				alert("댓글 삭제되었습니다");
+				getBookmarkList();
+			}
+		})
+
+	}else if (e.target.tagName === "svg") {
+        console.log("삭제버튼 안의 SVG 태그 클릭했음");
     
+        // 부모 button 클릭 설정
+        let btn = e.target.closest('button');
+        if (btn) {
+          btn.click();
+        }
+      }else if(e.target.tagName === "path"){
+        console.log("삭제버튼 안의 SVG 태그-path 클릭했음");
+    
+        let btn = e.target.closest('button');
+        if (btn) {
+          btn.click();
+        }
+      }
+
+
 })

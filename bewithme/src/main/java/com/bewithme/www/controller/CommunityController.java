@@ -16,6 +16,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -107,28 +108,58 @@ public class CommunityController {
 	}
 	
 	
-	//detail을 가져오는 
-	@GetMapping({"/detail","/modify"})
-	public String detailCommunity(@RequestParam("com_num")int com_num,  HttpServletRequest request, Model m){
+	//detail 상세정보 
+	@GetMapping("/detail")
+	public String detailCommunity(@RequestParam("com_num")int com_num, Model m){
 		
 		log.info(">>> com_num : " + com_num);
-		log.info(">>> mapping : " + request.getRequestURI());
 		
 		CommunityVO cvo = csv.detailCommunity(com_num);
 		log.info(">>> com_num의 cvo : " + cvo.toString());
-		
-		String path = request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/")+1);
-		log.info(">>> path : " + path);
-		if(path.equals("detail")) {
-			int isOk = csv.updateCommunityCount(com_num);
-			log.info("com_cnt +1 : OK!");
-		}
-		
-		int commentCnt = csv.selectCommentCnt(com_num);
-		m.addAttribute("comment_cnt", commentCnt);
 		m.addAttribute("cvo", cvo);
+		
+		//조회수 +1
+		int isOk = csv.updateCommunityCount(com_num);
+		log.info(">>> 조회수 +1 : " + ( isOk>0 ? "성공" : "실패"));
+		
 		return "/community/com_comment";
 	} 
+	
+	//수정 정보 출력
+	@GetMapping("/modifypage")
+	public String modifyCommunitypage(@RequestParam("com_num")int com_num, Model m){
+		
+		log.info(">>> com_num : " + com_num);
+	
+		CommunityVO cvo = csv.detailCommunity(com_num);
+		log.info(">>> com_num의 cvo : " + cvo.toString());
+		m.addAttribute("cvo", cvo);
+
+		
+		return "/community/community_mod";
+	}
+	
+	//수정
+	@PutMapping(value="/modify", consumes="application/json", produces = {MediaType.TEXT_PLAIN_VALUE})
+	public ResponseEntity<String> modifyComunnity(@RequestBody CommunityVO cvo) {
+		log.info(">>> cvo : " + cvo.toString());
+		int isOk = csv.updateCommunity(cvo);
+		
+		return isOk > 0? new ResponseEntity<String>("1",HttpStatus.OK)
+				: new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	//삭제
+	@DeleteMapping(value="/{com_num}",  produces = {MediaType.TEXT_PLAIN_VALUE})
+	public ResponseEntity<String> deleteComunnity(@PathVariable("com_num") int com_num) {
+		log.info(">>> com_num : " + com_num);
+		int isOk = csv.deleteCommunity(com_num);
+		
+		return isOk > 0? new ResponseEntity<String>("1",HttpStatus.OK)
+				: new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	
 	
 	//좋아요 업데이트(community_like에 추가/삭제 -> community like_cnt 자동 업데이트)
 	@GetMapping(value="/updateLike/{btnVal}", produces = {MediaType.TEXT_PLAIN_VALUE})

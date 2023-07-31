@@ -17,6 +17,8 @@ public class BookmarkVO {
 	private String id;
 	private int cou_num;
 	
+	
+	
 	public int getNum() {
 		return num;
 	}
@@ -33,6 +35,11 @@ public class BookmarkVO {
 		return cou_num;
 	}
 	public void setCou_num(int cou_num) {
+		this.cou_num = cou_num;
+	}
+	
+	public BookmarkVO(String id, int cou_num) {
+		this.id = id;
 		this.cou_num = cou_num;
 	}
 	

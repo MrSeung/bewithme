@@ -3,7 +3,7 @@
 	<section name="EditorSelectionDialog">
 		<item key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION" value=".js"/>
 		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="true"/>
-		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="C:\vscode\VSCode-win32-x64-1.77.3\Code.exe"/>
+		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="C:\Users\EZENIC-174\Downloads\VSCode-win32-x64-1.77.0\Code.exe"/>
 	</section>
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
